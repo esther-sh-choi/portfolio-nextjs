@@ -1,10 +1,11 @@
 import about from "../../../public/assets/about-img.jpg";
+import Image from "next/image";
 import React from "react";
 
 const About = () => {
   return (
     <div id="about" className="w-full md:h-screen p-2 flex items-center py-16">
-      <div className="max-w-[1240px] mx-auto md:grid grid-cols-5 gap-8">
+      <div className=" w-full m-20 md:grid grid-cols-5 gap-8 lg:m-40">
         <div className="col-span-3 flex flex-col justify-center">
           <p className="uppercase text-xl tracking-widest text-[#5651e5]">
             About
@@ -27,12 +28,14 @@ const About = () => {
           </p>
           <p>Check out some of my latest projects</p>
         </div>
-        <div className="w-full h-[400px] m-auto p-4 shadow-lg shadow-gray-400 rounded-xl flex items-center justify-center overflow-hidden col-span-2">
-          <img
+        <div className="w-full h-[50vmin] mt-5 p-4 shadow-lg shadow-gray-400 rounded-xl flex items-center justify-center overflow-hidden md:h-[300px] col-span-2">
+          <Image
             className="rounded-xl w-full h-full object-cover"
             src={about.src}
             alt="programmer"
-          ></img>
+            width="100"
+            height="100"
+          ></Image>
         </div>
       </div>
     </div>

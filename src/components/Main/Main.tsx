@@ -7,7 +7,7 @@ const Main = () => {
     mainContainer: "relative w-full h-screen text-center pt-20",
   };
   return (
-    <div className={styles.mainContainer}>
+    <div id="Home" className={styles.mainContainer}>
       <div className="hidden sm:flex justify-center items-center w-full h-[100%]">
         <img
           className="w-[600px] max-h-[100vmin] md:w-[700px] lg:w-[800px] xl:w-[900px] ease-out duration-100 z-0"
