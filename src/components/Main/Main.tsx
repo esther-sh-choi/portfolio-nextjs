@@ -4,7 +4,7 @@ import TypeIt from "typeit-react";
 
 const Main = () => {
   const styles = {
-    mainContainer: "w-full h-screen text-center pt-20",
+    mainContainer: "relative w-full h-screen text-center pt-20",
   };
   return (
     <div className={styles.mainContainer}>
@@ -16,7 +16,7 @@ const Main = () => {
         />
       </div>
 
-      <div className="fixed top-0 w-full h-[100%] p-5">
+      <div className="absolute top-0 w-full h-[100%] p-5">
         <div className="flex flex-col justify-center items-center h-[100%]">
           <div className="flex flex-col justify-center items-center h-[100px]">
             <h2>Hi, </h2>

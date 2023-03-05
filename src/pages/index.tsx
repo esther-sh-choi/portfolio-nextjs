@@ -1,7 +1,6 @@
 import About from "@component/components/About";
 import Main from "@component/components/Main";
 import Navbar from "@component/components/Navbar";
-import { Inter } from "next/font/google";
 import Head from "next/head";
 
 export default function Home() {
