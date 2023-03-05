@@ -1,11 +1,9 @@
 import image from "../../../public/assets/intro-img.png";
+import { styles } from "./MainStyles";
 import React from "react";
 import TypeIt from "typeit-react";
 
 const Main = () => {
-  const styles = {
-    mainContainer: "relative w-full h-screen text-center pt-20",
-  };
   return (
     <div id="Home" className={styles.mainContainer}>
       <div className="hidden sm:flex justify-center items-center w-full h-[100%]">
@@ -39,7 +37,7 @@ const Main = () => {
               }}
             />
           </div>
-          <button className="mt-10 px-5 py-2">Resume</button>
+          <button className={styles.resumeButton}>Resume</button>
         </div>
       </div>
     </div>

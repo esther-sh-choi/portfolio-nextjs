@@ -1,4 +1,4 @@
-import { skills } from "../skillsList";
+import { skills } from "../../data/skillsList";
 import Image from "next/image";
 import React from "react";
 
