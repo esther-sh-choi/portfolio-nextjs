@@ -12,7 +12,10 @@ const Skills = () => {
         <h2 className="py-4">What I Can Do</h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8">
           {skills.map((skill) => (
-            <div className="p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-200">
+            <div
+              key={skill.id}
+              className="p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-200"
+            >
               <div className="grid grid=cols-2 gap-4 justify-center items-center">
                 <div className="m-auto">
                   <Image

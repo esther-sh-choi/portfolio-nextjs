@@ -1,11 +1,10 @@
 import { projects } from "../../data/projectsData";
 import { Carousel } from "flowbite-react";
-import Image from "next/image";
 import React from "react";
 
 const Projects = () => {
   return (
-    <div className="w-full h-screen">
+    <div id="projects" className="w-full">
       <div className="max-w-[1240px] mx-auto px-2 py-16">
         <p className="text-xl trakcing-widest uppercase text=[#5651e5]">
           Projects
