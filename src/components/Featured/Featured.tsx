@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "flowbite-react";
-import { featured } from "../../data/projectsData";
+import { projects } from "../../data/projectsData";
 
 const Featured = () => {
   return       <div className="max-w-[1240px] mx-auto px-2 py-16">
@@ -10,7 +10,7 @@ const Featured = () => {
   <h2 className="py-4">What I've Built</h2>
   <div className="w-full h-[400px]">
     <Carousel slideInterval={10000}>
-      {featured.map((project) => (
+      {projects.filter(projects => projects.id === 2).map((project) => (
         <div
           key={project.id}
           className="px-10 md:px-20 h-full flex justify-center bg-slate-500 rounded-2xl shadow-inner"
