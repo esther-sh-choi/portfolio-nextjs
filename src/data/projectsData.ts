@@ -101,15 +101,15 @@ export const projects = [
       "Confluence",
     ],
     description:
-      "Do you ever get tired of managing hundreds of job applications? It's easy to forget when and where you applied when you're applying to so many jobs. Jobnomics helps you organize your job applications and it comes with loads of other cools features to help you with your job search. All you need to do is copy and paste the job posting link, and we provide you with the summary of job description and sample interview questions and answers. Additional features include job filter/search/sorting, note-taking, and email reminders for interview dates.",
+      "Created a user-authenticated app for sharing virtual fireplaces via unique links. Both users and visitors can hang stockings on other's fireplaces but must be registered to create their own fireplace.",
     technology: [
-      "Secure with Auth0 (OAuth 2) with bearer token rotation and integrated Github Actions for continuous deployment.",
-      "Optimistic update with RTK Query to allow to smooth user experience when dragging and dropping job cards.",
+      "Implemented a countdown until Christmas midnight and prevented stockings from being opened before then.",
+      "•Collaborated with a backend developer and 2 designers as the main frontend developer of the team - Jira & Zeplin.",
     ],
     image: {
       src: jollymessages,
       gif: jollymessagesGif,
-      alt: "jobnomics thumbnail",
+      alt: "jolly messages thumbnail",
     },
     links: {
       website: "https://jollymessage.com/",
