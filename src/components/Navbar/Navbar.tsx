@@ -14,7 +14,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBackground, setNavBackground] = useState("transparent");
-  const [linkColor, setLinkColor] = useState("#ff7e2e");
+  const [linkColor, setLinkColor] = useState("#f43f5e");
   gsap.registerPlugin(ScrollToPlugin);
 
   const router = useRouter();

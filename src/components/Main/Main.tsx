@@ -17,16 +17,16 @@ const Main = () => {
         className={`${globalStyles.paddingX} absolute inset-0 top-[120px] max-w-7x1 mx-auto flex flex-row items-start gap-5`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#FFAE42]" />
+          <div className="w-5 h-5 rounded-full bg-[#f43f5e]" />
           <div
-            className={`w-1 h-80 bg-gradient-to-b from-orange-300 to-transparent sm:h-40`}
+            className={`w-1 h-80 bg-gradient-to-b from-red-400 to-transparent sm:h-40`}
           />
         </div>
         <div>
           <h1 className={`${styles.mainText} flex flex-col items-start`}>
             Hi, I'm <br className="block md:hidden" />
-            <span className="text-[#FFAE42]">Esther SH Choi</span>
-            <div className="text-3xl text-[#FFAE42]">
+            <span className="text-[#f43f5e]">Esther SH Choi</span>
+            <div className="text-3xl text-[#f43f5e]">
               <TypeIt
                 cursorchar={<div>*</div>}
                 options={{ loop: true }}
@@ -46,7 +46,6 @@ const Main = () => {
           </h1>
         </div>
       </div>
-      <ScrollDown />
     </div>
   );
 };

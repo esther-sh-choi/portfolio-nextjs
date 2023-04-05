@@ -11,15 +11,9 @@ const ladderGif = "/projects/ladder-demo.gif";
 const ladder = "/projects/ladder.png";
 const schedulerGif = "/projects/scheduler2.gif";
 
-const icon = [
-  { label: FaDesktop, alt: "Desktop Compatible" },
-  { label: FaMobileAlt, alt: "Mobile Compatible" },
-];
-
 export const projects = [
   {
     id: 2,
-    icon,
     title: "Jobnomics: AI-Powered Job Application Tracking Tool",
     skills: [
       "React",
@@ -60,7 +54,6 @@ export const projects = [
   },
   {
     id: 1,
-    icon,
     title: "Restaurant Food Pickup App (SMS notification)",
     skills: [
       "JQuery",
@@ -92,7 +85,6 @@ export const projects = [
 
   {
     id: 3,
-    icon,
     title: "Jolly Messages: Stuff My Stocking (Client-side)",
     skills: [
       "React",
@@ -120,7 +112,6 @@ export const projects = [
   },
   {
     id: 4,
-    icon,
     title: "Interview Scheduler",
     skills: ["React", "Web Socket", "useReducer"],
     description:
@@ -142,7 +133,6 @@ export const projects = [
   },
   {
     id: 5,
-    icon,
     title: "Ladder Game for Indecisive People",
     skills: [
       "Figma",

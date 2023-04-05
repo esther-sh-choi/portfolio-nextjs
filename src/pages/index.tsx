@@ -1,3 +1,4 @@
+import ProjectModal from "../components/ProjectModal";
 import About from "@component/components/About";
 import Contact from "@component/components/Contact";
 import Main from "@component/components/Main";
@@ -6,9 +7,17 @@ import Projects from "@component/components/Projects";
 import ScrollDown from "@component/components/ScrollDown";
 import Skills from "@component/components/Skills";
 import CanvasContainer from "@component/components/canvas/CanvasContainer";
+import { RootState } from "@component/store/store";
 import Head from "next/head";
+import React from "react";
+import { useSelector } from "react-redux";
 
 export default function Home() {
+  const projectData = useSelector(
+    (state: RootState) => state.project.projectData
+  );
+  const isOpen = useSelector((state: RootState) => state.project.isOpen);
+
   return (
     <>
       <Head>
@@ -21,12 +30,13 @@ export default function Home() {
         <CanvasContainer />
       </div>
       <Navbar />
-
       <Main />
       <About />
       <Skills />
       <Projects />
       <Contact />
+      {isOpen && projectData && <ProjectModal />}
+      <ScrollDown />
     </>
   );
 }
