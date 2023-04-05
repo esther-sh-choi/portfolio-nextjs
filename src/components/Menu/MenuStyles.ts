@@ -7,7 +7,7 @@ export const styles = {
   menuHeader: "flex w-full items-center justify-between",
   closeBtn: "rounded-full shadow-md shadow-gray-400 p-3 cursor-pointer",
   divider: "border-b border-gray-300 my-4",
-  menuLink: "py-4 text-lg text-center",
+  menuLink: "py-4 text-lg text-center cursor-pointer",
   menuMain: "py-4 flex flex-col",
   menuFooter: "pt-40",
   footerTitle: "uppercase tracking-widest text-[#5651e5]",

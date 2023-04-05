@@ -9,7 +9,7 @@ import Skills from "@component/components/Skills";
 import CanvasContainer from "@component/components/canvas/CanvasContainer";
 import { RootState } from "@component/store/store";
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 export default function Home() {
@@ -17,6 +17,27 @@ export default function Home() {
     (state: RootState) => state.project.projectData
   );
   const isOpen = useSelector((state: RootState) => state.project.isOpen);
+
+  function disableScroll() {
+    // Get the current page scroll position
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollLeft =
+      window.pageXOffset || document.documentElement.scrollLeft;
+
+    // if any scroll is attempted,
+    // set this to the previous value
+    window.onscroll = function () {
+      window.scrollTo(scrollLeft, scrollTop);
+    };
+  }
+
+  function enableScroll() {
+    window.onscroll = function () {};
+  }
+
+  useEffect(() => {
+    !isOpen ? enableScroll() : disableScroll();
+  }, [isOpen]);
 
   return (
     <>

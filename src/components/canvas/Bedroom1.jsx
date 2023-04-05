@@ -4,11 +4,13 @@ import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { useLayoutEffect } from "react";
+import { useSelector } from "react-redux";
 
 const Bedroom = ({ isMobile }) => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   const { scene: bedroomScene } = useGLTF("/assets/models/bedroom.glb");
   const { scene, camera } = useThree();
+  const isOpen = useSelector((state) => state.project.isOpen);
 
   const tl = gsap.timeline();
 
@@ -24,15 +26,16 @@ const Bedroom = ({ isMobile }) => {
       z: 5.813218278397693,
       scrollTrigger: {
         trigger: "#home",
-        pin: true,
+        // pin: "#home",
+        pinSpacing: false,
         start: "top bottom",
         end: "top top",
         scrub: true,
         immediateRender: false,
         markers: true,
         snap: {
-          snapTo: "labels", // snap to the closest label in the timeline
-          duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+          snapTo: "#home", // snap to the closest label in the timeline
+          duration: { min: 0.2, max: 1 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
           delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
           ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
         },
@@ -49,12 +52,13 @@ const Bedroom = ({ isMobile }) => {
         start: "top bottom",
         end: "top top",
         scrub: true,
-        pin: true,
+        // pin: "#about",
+        pinSpacing: false,
         immediateRender: false,
         markers: true,
         snap: {
           snapTo: "#about", // snap to the closest label in the timeline
-          duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+          duration: { min: 0.2, max: 1 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
           delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
           ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
         },
@@ -70,12 +74,14 @@ const Bedroom = ({ isMobile }) => {
         trigger: "#skills",
         start: "top bottom",
         end: "top top",
-        pin: true,
+        // pin: "#skills",
+        pinSpacing: false,
         scrub: true,
         immediateRender: false,
+        markers: true,
         snap: {
           snapTo: "#skills", // snap to the closest label in the timeline
-          duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+          duration: { min: 0.2, max: 1 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
           delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
           ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
         },
@@ -91,17 +97,45 @@ const Bedroom = ({ isMobile }) => {
         trigger: "#projects",
         start: "top bottom",
         end: "top top",
-        pin: true,
+        // pin: "#projects",
+        pinSpacing: false,
         scrub: true,
         immediateRender: false,
+        // markers: true,
         snap: {
           snapTo: "#projects", // snap to the closest label in the timeline
-          duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+          duration: { min: 0.2, max: 1 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
           delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
           ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
         },
       },
     });
+
+    if (isOpen) {
+      tl.kill();
+    } else {
+      // tl.to(camera.position, {
+      //   x: -0.02947425441128117,
+      //   y: 0.0019282798237053556,
+      //   z: 0.0015648388487006014,
+      //   scrollTrigger: {
+      //     trigger: "#projects",
+      //     start: "top bottom",
+      //     end: "top top",
+      //     // pin: "#projects",
+      //     pinSpacing: false,
+      //     scrub: true,
+      //     immediateRender: false,
+      //     markers: true,
+      //     snap: {
+      //       snapTo: "#projects", // snap to the closest label in the timeline
+      //       duration: { min: 0.2, max: 1 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+      //       delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+      //       ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
+      //     },
+      //   },
+      // });
+    }
 
     // Coffee - contact me
     tl.to(camera.position, {
@@ -111,13 +145,15 @@ const Bedroom = ({ isMobile }) => {
       scrollTrigger: {
         trigger: "#contact",
         start: "top bottom",
-        end: "top top",
-        pin: true,
+        end: "top 10%",
+        pin: "#contact",
+        pinSpacing: false,
         scrub: true,
         immediateRender: false,
+        markers: true,
         snap: {
           snapTo: "#contact", // snap to the closest label in the timeline
-          duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+          duration: { min: 0.2, max: 1 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
           delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
           ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
         },

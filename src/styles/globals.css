@@ -35,8 +35,4 @@ html {
   h2 {
     @apply text-3xl sm:text-4xl;
   }
-
-  li {
-    @apply cursor-pointer;
-  }
 }

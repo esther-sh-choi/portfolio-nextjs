@@ -28,7 +28,7 @@ const CanvasContainer = () => {
   }, []);
 
   return (
-    <Canvas>
+    <Canvas clssName="z-0">
       <OrbitControls
         enableZoom={false}
         enablePan={false}

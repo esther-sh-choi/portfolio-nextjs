@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   mode: "jit",
   content: [
@@ -11,9 +13,7 @@ module.exports = {
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    colors: {
-      primary: "#915eff",
-    },
+    colors,
   },
   plugins: [require("flowbite/plugin")],
 };

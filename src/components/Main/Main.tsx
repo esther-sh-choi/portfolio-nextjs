@@ -1,20 +1,14 @@
-import image from "../../../public/assets/intro-img.png";
-import ScrollDown from "../ScrollDown";
-import Bedroom from "../canvas/Bedroom";
-import CanvasContainer from "../canvas/CanvasContainer";
-import ComputerCanvas from "../canvas/Computers";
 import { globalStyles } from "../styles";
 import { styles } from "./MainStyles";
-import { motion } from "framer-motion";
 import React from "react";
 import TypeIt from "typeit-react";
 
 const Main = () => {
   // return (<section id="Home" className={styles.mainContainer}>
   return (
-    <div id="Home" className="h-screen relative">
+    <div id="Home" className="h-screen z-20 relative">
       <div
-        className={`${globalStyles.paddingX} absolute inset-0 top-[120px] max-w-7x1 mx-auto flex flex-row items-start gap-5`}
+        className={`${globalStyles.paddingX} absolute inset-0 top-[120px] max-w-7x1 mx-auto flex flex-row items-start gap-5 z-20`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#f43f5e]" />

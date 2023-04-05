@@ -21,8 +21,11 @@ const Projects = () => {
 
   return (
     <>
-      <div id="projects" className="h-screen flex justify-end items-center">
-        <div className="max-w-[1240px] w-full lg:w-[40%] mr-20 px-2 py-16">
+      <div
+        id="projects"
+        className="h-screen flex justify-end items-center z-20"
+      >
+        <div className="max-w-[1240px] w-full lg:w-[40%] mr-20 px-2 py-16 z-20">
           <p className="text-xl trakcing-widest uppercase text-[#ff1f45] text-right">
             Projects
           </p>
@@ -43,7 +46,7 @@ const Projects = () => {
             ))}
           </Carousel>
         </div> */}
-          <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4 bg-[#ff738b] p-4 shadow-xl rounded-xl">
+          <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4 bg-[#ff738b] bg-opacity-70 p-4 shadow-xl rounded-xl">
             {projects.map((project) => (
               <div
                 key={project.id}

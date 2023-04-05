@@ -5,8 +5,8 @@ import React from "react";
 const About = () => {
   return (
     <div id="about" className="h-screen z-20 flex justify-center">
-      <div className="bg-white bg-opacity-70 p-10 rounded-xl m-auto">
-        <p className="uppercase text-xl tracking-widest text-[#70739e]">
+      <div className="bg-white bg-opacity-70 p-10 rounded-xl m-auto z-20">
+        <p className="uppercase text-xl tracking-widest text-[#f43f5e]">
           About
         </p>
         <p>
