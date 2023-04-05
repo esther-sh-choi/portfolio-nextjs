@@ -1,5 +1,13 @@
-import ladderDemo from "../../public/projects/ladder-demo.gif";
-import schedulerDemo from "../../public/projects/scheduler2.gif";
+import jobnomicsGif from "../../public/projects/dragdrop_dropdown_date.gif";
+import foodPickup from "../../public/projects/food-pickup.png";
+import foodPickupGif from "../../public/projects/foodPickupGif.gif";
+import scheduler from "../../public/projects/interview-scheduler.png";
+import jobnomics from "../../public/projects/jobnomics.jpg";
+import jollymessages from "../../public/projects/jollymessages.png";
+import jollymessagesGif from "../../public/projects/jollymessagesGif.gif";
+import ladderGif from "../../public/projects/ladder-demo.gif";
+import ladder from "../../public/projects/ladder.png";
+import schedulerGif from "../../public/projects/scheduler2.gif";
 import { FaMobileAlt, FaDesktop } from "react-icons/fa";
 
 const icon = [
@@ -11,64 +19,152 @@ export const projects = [
   {
     id: 1,
     icon,
-    title: "Ladder Game for Indecisive People",
-    skills: ["Figma", "React.js", "CSS Module"],
+    title: "Restaurant Food Pickup App (SMS notification)",
+    skills: [
+      "JQuery",
+      "Twilio",
+      "Express",
+      "Node.js",
+      "PostgreSQL",
+      "Materialize CSS",
+      "Heroku",
+    ],
     description:
-      "Assigning roles or deciding what to eat can be a daunting task for indecisive people. Simply input the roles and choose an animal. Can't choose? Let the ladder pick for you.",
+      "This app provides service for two types of users: customer and restaurant owner. The customer page contains a menu and a cart to keep track of their order. They are able to see the status of their order real time due to polling. On the restaurant admin page, when they order from customers, they are able to see the order cards. They have to option to set the preparation time, edit the preparation time, cancel order, notify customer that order is ready, and complete the order once picked up. All of this is done notified to the customers in the status page and as SMS text to the phone number entered during checkout. *To view the restaurant orders page, please login with username <strong>admin</strong> and password <strong>admin</strong>.",
     technology: [
-      "Technology: Howler, Context API, React hooks (useState, useEffect, useHistory, useRef, useContext), localStorage, Canvas API",
-      "Built ladder algorithm from scratch",
-      "Dynamic website based on the number of players",
+      "Utilized Jira agile method to plan and delegate tasks for heightened efficiency",
+      "Provided peer mentorship to peers",
+      "Created user authentication and REST API functionality for restaurant staff to manage orders, including a real-time countdown timer for order preparation",
+      "Built a food ordering app with real-time status updates to customer and restaurant via app and SMS (i.e., Twilio).",
     ],
     image: {
-      src: ladderDemo,
-      alt: "Ladder game demo thumbnail",
+      src: foodPickup,
+      gif: foodPickupGif,
+      alt: "Food Pickup Order",
     },
     links: {
-      website: "https://adorable-stroopwafel-9cc3ff.netlify.app/",
-      github: "https://github.com/esther-sh-choi/ladder-game",
+      website: "https://food-pickup-order.herokuapp.com/",
+      github: "https://github.com/esther-sh-choi/food-pickup-order",
     },
   },
   {
     id: 2,
     icon,
+    title: "Jobnomics: AI-Powered Job Application Tracking Tool",
+    skills: [
+      "React",
+      "Node.js",
+      "Express",
+      "Redux Toolkit",
+      "RTK Query",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Auth0 - OAuth2",
+      "Puppeteer",
+      "React Beautiful Dnd",
+      "Material UI",
+      "AWS SES",
+      "Cron",
+      "OpenAI",
+      "Github Actions",
+      "Railway",
+      "Netlify",
+    ],
+    description:
+      "Do you ever get tired of managing hundreds of job applications? It's easy to forget when and where you applied when you're applying to so many jobs. Jobnomics helps you organize your job applications and it comes with loads of other cools features to help you with your job search. All you need to do is copy and paste the job posting link, and we provide you with the summary of job description and sample interview questions and answers. Additional features include job filter/search/sorting, note-taking, and email reminders for interview dates.",
+    technology: [
+      "Secure with Auth0 (OAuth 2) with bearer token rotation and integrated Github Actions for continuous deployment.",
+      "Optimistic update with RTK Query to allow to smooth user experience when dragging and dropping job cards.",
+    ],
+    image: {
+      src: jobnomics,
+      gif: jobnomicsGif,
+      alt: "jobnomics thumbnail",
+    },
+    links: {
+      website: "https://www.jobnomics.net",
+      githubClient: "https://github.com/tienviet10/jobnomics",
+      github: "https://github.com/esther-sh-choi/jobnomics-api",
+    },
+  },
+  {
+    id: 3,
+    icon,
+    title: "Jolly Messages: Stuff My Stocking (Client-side)",
+    skills: [
+      "React",
+      "TypeScript",
+      "Material UI",
+      "Jira",
+      "Zeplin",
+      "Confluence",
+    ],
+    description:
+      "Created a user-authenticated app for sharing virtual fireplaces via unique links. Both users and visitors can hang stockings on other's fireplaces but must be registered to create their own fireplace.",
+    technology: [
+      "Implemented a countdown until Christmas midnight and prevented stockings from being opened before then.",
+      "•Collaborated with a backend developer and 2 designers as the main frontend developer of the team - Jira & Zeplin.",
+    ],
+    image: {
+      src: jollymessages,
+      gif: jollymessagesGif,
+      alt: "jolly messages thumbnail",
+    },
+    links: {
+      website: "https://jollymessage.com/",
+      github: "https://github.com/esther-sh-choi/stuff-stocking-frontend",
+    },
+  },
+  {
+    id: 4,
+    icon,
     title: "Interview Scheduler",
     skills: ["React", "Web Socket", "useReducer"],
-    description: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-            nemo, rem tempora ea deleniti tempore inventore id numquam est
-            nesciunt at deserunt? Rem eaque eveniet, iure velit veritatis culpa
-            quis.`,
+    description:
+      "Using an available database, I built a client-side website using React and WebSocket according to what the API has to offer. Many times, using external API means, we cannot controll the type of data structure we receive. I learned to use these data structures and restructure it for increased performance.",
+    technology: [
+      "Created the client facing website and connected it with the existing scheduler REST API.",
+      "Real time update to website across all devices and users with the use of WebSocket.",
+      "Optimized state management through React built-in useReducer hook and other custom hooks for enhanced performance and modularity.",
+    ],
     image: {
-      src: schedulerDemo,
+      src: scheduler,
+      gif: schedulerGif,
       alt: "Interview Scheduler",
     },
     links: {
-      website: "",
-      github: "",
+      website: "https://stellular-genie-2bbdd4.netlify.app/",
+      github: "https://github.com/esther-sh-choi/interview-scheduler",
     },
   },
-];
-
-const others = [
   {
+    id: 5,
     icon,
-    id: 3,
-    title: "Foodify - Playlist of Restaurants",
-    skills: ["Figma", "React.js", "CSS Module", "Node.js"],
+    title: "Ladder Game for Indecisive People",
+    skills: [
+      "Figma",
+      "React.js",
+      "CSS Module",
+      "Canvas",
+      "Context API",
+      "Howler",
+    ],
     description:
-      "We love to share our favourite songs through a playlist. Why not have a playlist for our favorite restaurants? Introducing the Eatlist. Share your go-to restaurants with the world!",
+      "Assigning roles or deciding what to eat can be a daunting task for indecisive people. Choose 2-6 players. Each player can pick an animal and write down the options according to the number of players. The ladder algorithm will randomly generate a ladder each game and will match the animal with an option. Watch a cool animation of color-codes paths leading to the option as you anticipate which option you get matched to.",
     technology: [
-      "Technology: Google Places API, React hooks (useHistory, useRef, useContext), Redux",
-      "CRUD website",
-      "User authentication using Node.js",
+      "Learned basic React hooks (useState, useEffect, useHistory, useRef, useContext)",
+      "Learned to use localstorage",
+      "Background music, dynamic ladder game based on number of players chosen",
     ],
     image: {
-      src: ladderDemo,
-      alt: "Foodify demo thumbnail",
+      src: ladder,
+      gif: ladderGif,
+      alt: "Ladder game demo thumbnail",
     },
     links: {
-      website: "",
-      github: "",
+      website: "https://adorable-stroopwafel-9cc3ff.netlify.app/",
+      github: "https://github.com/esther-sh-choi/ladder-game",
     },
   },
 ];

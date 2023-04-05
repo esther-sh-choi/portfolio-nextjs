@@ -3,12 +3,20 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth !important;
+}
+
+:root {
+  --ti-cursor-font-size: 35px;
+  --ti-cursor-font-weight: 400;
+  --ti-cursor-color: #ffae42;
 }
 
 @layer base {
   body {
-    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide;
+    background: #70739e;
+    background: linear-gradient(158deg, #70739e 0%, #496a6c 25%, #70739e 100%);
+
+    @apply tracking-wide;
   }
 
   h1,

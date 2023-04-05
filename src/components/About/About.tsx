@@ -4,8 +4,10 @@ import React from "react";
 
 const About = () => {
   return (
-    <div id="about" className="w-full md:h-screen p-2 flex items-center py-16">
-      <div className=" w-full m-20 md:grid grid-cols-5 gap-8 lg:m-40">
+    // <div id="about" className="w-full md:h-screen p-2 flex items-center py-16">
+    <div id="about" className="h-screen">
+      About
+      {/* <div className=" w-full m-20 md:grid grid-cols-5 gap-8 lg:m-40">
         <div className="col-span-3 flex flex-col justify-center">
           <p className="uppercase text-xl tracking-widest text-[#5651e5]">
             About
@@ -37,7 +39,7 @@ const About = () => {
             height="100"
           ></Image>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
