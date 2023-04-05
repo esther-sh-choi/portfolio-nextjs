@@ -1,4 +1,5 @@
 import image from "../../../public/assets/intro-img.png";
+import ScrollDown from "../ScrollDown";
 import Bedroom from "../canvas/Bedroom";
 import CanvasContainer from "../canvas/CanvasContainer";
 import ComputerCanvas from "../canvas/Computers";
@@ -11,7 +12,7 @@ import TypeIt from "typeit-react";
 const Main = () => {
   // return (<section id="Home" className={styles.mainContainer}>
   return (
-    <div id="Home" className="h-screen">
+    <div id="Home" className="h-screen relative">
       <div
         className={`${globalStyles.paddingX} absolute inset-0 top-[120px] max-w-7x1 mx-auto flex flex-row items-start gap-5`}
       >
@@ -43,11 +44,9 @@ const Main = () => {
               />
             </div>
           </h1>
-          {/* <p className={`${styles.subText} mt-2 text-white-100`}>
-            I develop user interfaces, database, and web applications.
-          </p> */}
         </div>
       </div>
+      <ScrollDown />
     </div>
   );
 };

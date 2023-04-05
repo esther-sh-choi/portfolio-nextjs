@@ -29,7 +29,6 @@ const Bedroom = ({ isMobile }) => {
         end: "top top",
         scrub: true,
         immediateRender: false,
-        markers: true,
         snap: {
           snapTo: "labels", // snap to the closest label in the timeline
           duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
@@ -51,7 +50,6 @@ const Bedroom = ({ isMobile }) => {
         scrub: true,
         pin: true,
         immediateRender: false,
-        markers: true,
         snap: {
           snapTo: "labels", // snap to the closest label in the timeline
           duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
@@ -73,7 +71,6 @@ const Bedroom = ({ isMobile }) => {
         pin: true,
         scrub: true,
         immediateRender: false,
-        markers: true,
         snap: {
           snapTo: "labels", // snap to the closest label in the timeline
           duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
@@ -95,7 +92,6 @@ const Bedroom = ({ isMobile }) => {
         pin: true,
         scrub: true,
         immediateRender: false,
-        markers: true,
         snap: {
           snapTo: "labels", // snap to the closest label in the timeline
           duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
@@ -107,8 +103,8 @@ const Bedroom = ({ isMobile }) => {
 
     // Coffee - contact me
     tl.to(camera.position, {
-      x: -0.0336012678122319,
-      y: 0.05605036637699721,
+      x: -0.036012678122319,
+      y: 0.06005036637699721,
       z: 0.06399400225061104,
       scrollTrigger: {
         trigger: "#contact",
@@ -117,7 +113,6 @@ const Bedroom = ({ isMobile }) => {
         pin: true,
         scrub: true,
         immediateRender: false,
-        markers: true,
         snap: {
           snapTo: "labels", // snap to the closest label in the timeline
           duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
