@@ -33,8 +33,8 @@ const CanvasContainer = () => {
         enableZoom={false}
         enablePan={false}
         enableDamping={true}
-        // maxPolarAngle={Math.PI / 2}
-        // minPolarAngle={Math.PI}
+        // maxAzimuthAngle={Math.PI / 2}
+        // minAzimuthAngle={Math.PI / 4}
       />
       <Bedroom isMobile={isMobile} />
       <Environment preset="lobby" />

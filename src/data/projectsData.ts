@@ -1,14 +1,15 @@
-import jobnomicsGif from "../../public/projects/dragdrop_dropdown_date.gif";
-import foodPickup from "../../public/projects/food-pickup.png";
-import foodPickupGif from "../../public/projects/foodPickupGif.gif";
-import scheduler from "../../public/projects/interview-scheduler.png";
-import jobnomics from "../../public/projects/jobnomics.jpg";
-import jollymessages from "../../public/projects/jollymessages.png";
-import jollymessagesGif from "../../public/projects/jollymessagesGif.gif";
-import ladderGif from "../../public/projects/ladder-demo.gif";
-import ladder from "../../public/projects/ladder.png";
-import schedulerGif from "../../public/projects/scheduler2.gif";
 import { FaMobileAlt, FaDesktop } from "react-icons/fa";
+
+const jobnomicsGif = "/projects/dragdrop_dropdown_date.gif";
+const foodPickup = "/projects/food-pickup.png";
+const foodPickupGif = "/projects/foodPickupGif.gif";
+const scheduler = "/projects/interview-scheduler.png";
+const jobnomics = "/projects/jobnomics.jpg";
+const jollymessages = "/projects/jollymessages.png";
+const jollymessagesGif = "/projects/jollymessagesGif.gif";
+const ladderGif = "/projects/ladder-demo.gif";
+const ladder = "/projects/ladder.png";
+const schedulerGif = "/projects/scheduler2.gif";
 
 const icon = [
   { label: FaDesktop, alt: "Desktop Compatible" },
@@ -16,37 +17,6 @@ const icon = [
 ];
 
 export const projects = [
-  {
-    id: 1,
-    icon,
-    title: "Restaurant Food Pickup App (SMS notification)",
-    skills: [
-      "JQuery",
-      "Twilio",
-      "Express",
-      "Node.js",
-      "PostgreSQL",
-      "Materialize CSS",
-      "Heroku",
-    ],
-    description:
-      "This app provides service for two types of users: customer and restaurant owner. The customer page contains a menu and a cart to keep track of their order. They are able to see the status of their order real time due to polling. On the restaurant admin page, when they order from customers, they are able to see the order cards. They have to option to set the preparation time, edit the preparation time, cancel order, notify customer that order is ready, and complete the order once picked up. All of this is done notified to the customers in the status page and as SMS text to the phone number entered during checkout. *To view the restaurant orders page, please login with username <strong>admin</strong> and password <strong>admin</strong>.",
-    technology: [
-      "Utilized Jira agile method to plan and delegate tasks for heightened efficiency",
-      "Provided peer mentorship to peers",
-      "Created user authentication and REST API functionality for restaurant staff to manage orders, including a real-time countdown timer for order preparation",
-      "Built a food ordering app with real-time status updates to customer and restaurant via app and SMS (i.e., Twilio).",
-    ],
-    image: {
-      src: foodPickup,
-      gif: foodPickupGif,
-      alt: "Food Pickup Order",
-    },
-    links: {
-      website: "https://food-pickup-order.herokuapp.com/",
-      github: "https://github.com/esther-sh-choi/food-pickup-order",
-    },
-  },
   {
     id: 2,
     icon,
@@ -88,6 +58,38 @@ export const projects = [
       github: "https://github.com/esther-sh-choi/jobnomics-api",
     },
   },
+  {
+    id: 1,
+    icon,
+    title: "Restaurant Food Pickup App (SMS notification)",
+    skills: [
+      "JQuery",
+      "Twilio",
+      "Express",
+      "Node.js",
+      "PostgreSQL",
+      "Materialize CSS",
+      "Heroku",
+    ],
+    description:
+      "This app provides service for two types of users: customer and restaurant owner. The customer page contains a menu and a cart to keep track of their order. They are able to see the status of their order real time due to polling. On the restaurant admin page, when they order from customers, they are able to see the order cards. They have to option to set the preparation time, edit the preparation time, cancel order, notify customer that order is ready, and complete the order once picked up. All of this is done notified to the customers in the status page and as SMS text to the phone number entered during checkout. *To view the restaurant orders page, please login with username <strong>admin</strong> and password <strong>admin</strong>.",
+    technology: [
+      "Utilized Jira agile method to plan and delegate tasks for heightened efficiency",
+      "Provided peer mentorship to peers",
+      "Created user authentication and REST API functionality for restaurant staff to manage orders, including a real-time countdown timer for order preparation",
+      "Built a food ordering app with real-time status updates to customer and restaurant via app and SMS (i.e., Twilio).",
+    ],
+    image: {
+      src: foodPickup,
+      gif: foodPickupGif,
+      alt: "Food Pickup Order",
+    },
+    links: {
+      website: "https://food-pickup-order.herokuapp.com/",
+      github: "https://github.com/esther-sh-choi/food-pickup-order",
+    },
+  },
+
   {
     id: 3,
     icon,

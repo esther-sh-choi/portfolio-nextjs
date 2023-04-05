@@ -82,7 +82,7 @@ const Bedroom = ({ isMobile }) => {
 
     // Computer - Projects
     tl.to(camera.position, {
-      x: -0.01947425441128117,
+      x: -0.02947425441128117,
       y: 0.0019282798237053556,
       z: 0.0015648388487006014,
       scrollTrigger: {
