@@ -52,6 +52,27 @@ const Computers = ({ isMobile }) => {
     //   0
     // );
 
+    gsap.to(controls.target, {
+      x: 0.1,
+      y: 1.3,
+      z: 0.7,
+      duration: 2,
+      ease: "power3.inOut",
+    });
+
+    gsap.to(
+      camera.position,
+      {
+        x: -4.6,
+        y: 2.1,
+        z: 11.8,
+        duration: 2,
+        ease: "power3.inOut",
+        onComplete: enableButtons,
+      },
+      "-=2"
+    );
+
     console.log(ref.current);
 
     // Office Rotation
@@ -139,9 +160,9 @@ const Computers = ({ isMobile }) => {
       dispose={null}
       ref={ref}
       position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-      rotation={[0, -Math.PI / 3, 0]}
+      // rotation={[0, -Math.PI / 3, 0]}
     >
-      {/* <primitive object={scene} scale={isMobile ? 0.7 : 0.75} /> */}
+      <primitive object={scene} scale={isMobile ? 0.7 : 0.75} />
       <group position={[-1.97, 4.23, -2.2]}>
         <group ref={bookshelfRef}>
           <mesh geometry={nodes["Bookshelf"].geometry} />
@@ -214,7 +235,7 @@ const ComputersCanvas = () => {
       //fov field of view (how wide)
       camera={{ position: [20, 3, -10], fov: 25 }}
       // rotate={[, 0, 0]}
-      // gl={{ preserveDrawingBuffer: true }}
+      gl={{ preserveDrawingBuffer: true }}
     >
       <ambientLight intensity={0.1} />
       <directionalLight position={[10, 3, -5]} color="#f3e7d3" />

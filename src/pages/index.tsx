@@ -4,6 +4,7 @@ import Main from "@component/components/Main";
 import Navbar from "@component/components/Navbar";
 import Projects from "@component/components/Projects";
 import Skills from "@component/components/Skills";
+import CanvasContainer from "@component/components/canvas/CanvasContainer";
 import Head from "next/head";
 
 export default function Home() {
@@ -15,12 +16,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="h-screen w-full fixed top-0 z-10 hidden lg:block">
+        <CanvasContainer />
+      </div>
       <Navbar />
+
       <Main />
-      {/* <About />
+      <About />
       <Skills />
       <Projects />
-      <Contact /> */}
+      <Contact />
     </>
   );
 }

@@ -37,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="w-full lg:h-screen">
+    <div id="contact" className="h-screen">
       <div className="m-5 sm:m-20 md:m-auto flex flex-col justify-center h-full max-w-xl">
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Contact
