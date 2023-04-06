@@ -56,7 +56,7 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }: MenuProps): JSX.Element => {
           </div>
         </div>
         <div className={styles.menuFooter}>
-          <h4 className={styles.footerTitle}>Let&apos;'s connect</h4>
+          <h4 className={styles.footerTitle}>Let&apos;s connect</h4>
           <div className={styles.connectIconContainer}>
             <div className={styles.connectIcon}>
               <FaLinkedinIn />

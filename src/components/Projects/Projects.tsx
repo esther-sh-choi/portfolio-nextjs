@@ -30,7 +30,7 @@ const Projects = () => {
             Projects
           </p>
           <h2 className="py-2 text-right text-[#eb4971] drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
-            What I&apos;'ve Built
+            What I&apos;ve Built
           </h2>
           <div className="mt-2 md:mt-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4 bg-[#ff738b] bg-opacity-70 p-4 shadow-xl rounded-xl">
             {projects.map((project) => (
