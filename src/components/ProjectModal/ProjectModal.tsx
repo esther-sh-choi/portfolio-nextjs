@@ -99,7 +99,7 @@ const ProjectModal = (): JSX.Element | null => {
 
           {/*footer*/}
           <div className="flex items-center justify-between pt-1 md:p-6 rounded-b">
-            <div className="w-full">
+            <div className="w-full flex flex-col md:flex-row">
               <Link
                 className="whitespace-nowrap w-full md:w-auto bg-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 text-center"
                 type="button"
