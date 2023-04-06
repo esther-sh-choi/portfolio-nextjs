@@ -17,7 +17,7 @@ const Main = () => {
         </div>
         <div>
           <h1 className={`${styles.mainText} flex flex-col items-start`}>
-            Hi, I'm <br className="block md:hidden" />
+            Hi, I&apos;'m <br className="block md:hidden" />
             <span className="text-[#f43f5e]">Esther SH Choi</span>
             <div className="text-xl md:text-3xl text-[#f43f5e]">
               <TypeIt

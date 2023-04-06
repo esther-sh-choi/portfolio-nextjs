@@ -1,5 +1,3 @@
-import about from "../../../public/assets/about-img.jpg";
-import Image from "next/image";
 import React from "react";
 
 const About = () => {
@@ -14,7 +12,7 @@ const About = () => {
         </h2>
         <div className="max-h-[60vh] overflow-auto bg-white bg-opacity-70 p-10 rounded-xl m-auto">
           <p className="whitespace-pre-line text-sm md:text-md lg:text-lg">
-            Hi, I'm Esther Choi. I am a software developer and an Ontario
+            Hi, I&apos;'m Esther Choi. I am a software developer and an Ontario
             certified teacher who previously worked for York Region District
             School Board. I first started coding, to teach young students the
             basics of Python. But little did I know that it would soon become a
@@ -31,10 +29,10 @@ const About = () => {
             fur baby named HooChooh, and he always keeps me company while I
             work. I also love musical theatres and playing keyboard in the band!
             {"\n"}
-            {"\n"}That being said, I've worked in various team settings (e.g.,
-            projects, teacher, waitress, barista, stage performer) and I know,
-            by experience,å how important collaboration and communication is.
-            And I can confidently say that I enjoy working in teams.{"\n"}
+            {"\n"}That being said, I&apos;'ve worked in various team settings
+            (e.g., projects, teacher, waitress, barista, stage performer) and I
+            know, by experience, how important collaboration and communication
+            is. And I can confidently say that I enjoy working in teams.{"\n"}
             {"\n"}Scroll further to learn more about me!
           </p>
         </div>
