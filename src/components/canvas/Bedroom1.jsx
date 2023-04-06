@@ -16,6 +16,7 @@ const Bedroom = ({ isMobile }) => {
 
   ScrollTrigger.config({
     limitCallbacks: true,
+    ignoreMobileResize: true,
   });
   console.log(camera);
 
@@ -30,7 +31,7 @@ const Bedroom = ({ isMobile }) => {
             trigger: "#home",
             // pin: "#home",
             pinSpacing: false,
-            start: "top 80%",
+            start: "top bottom",
             end: "top top",
             scrub: true,
             immediateRender: false,

@@ -36,7 +36,7 @@ const Projects = () => {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="flex flex-col items-center justify-center w-full shadow-lg rounded-xl group bg-white hover:bg-gradient-to-r from-orange-300 to-yellow-200 hover:cursor-pointer overflow-hidden min-h-[350px]"
+                className="flex flex-col items-center justify-center w-full shadow-lg rounded-xl group bg-white hover:bg-gradient-to-r from-orange-300 to-yellow-200 hover:cursor-pointer overflow-hidden min-h-[250px]"
                 onClick={() => handleOpenProject(project)}
               >
                 <div className="w-[101%] image">
