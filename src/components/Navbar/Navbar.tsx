@@ -49,7 +49,15 @@ const Navbar = () => {
         shadow ? "shadow-lg" : ""
       } bg-white md:bg-transparent md:shadow-none`}
     >
-      <div className={styles.navbarContent}>
+      <div
+        className={`${styles.navbarContent} cursor-pointer`}
+        onClick={() => {
+          gsap.to(window, {
+            scrollTo: `#home`,
+            ease: "power1.inOut",
+          });
+        }}
+      >
         <Image src={logo} alt="/" width="50" height="50" />
         <div>
           <ul
@@ -57,9 +65,6 @@ const Navbar = () => {
             style={{ color: `${linkColor}` }}
           >
             {routes.map((route) => (
-              // <Link href={route.path} key={route.id}>
-              //   <li className={styles.navbarLink}>{route.name}</li>
-              // </Link>
               <button
                 key={route.id}
                 className={styles.navbarLink}
