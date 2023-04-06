@@ -13,7 +13,8 @@ html {
 
 @layer base {
   body {
-    background: rgb(255, 185, 194);
+    /* background: rgb(255, 185, 194); */
+    background: white;
     /* background: linear-gradient(158deg, #70739e 0%, #496a6c 25%, #70739e 100%); */
     @apply bg-gradient-to-r from-red-200 via-red-300 to-yellow-200;
     @apply tracking-wide;
