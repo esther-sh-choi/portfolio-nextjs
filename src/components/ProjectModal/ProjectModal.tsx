@@ -1,5 +1,6 @@
 import { closeProjectModal } from "@component/features/projectSlice";
 import { RootState } from "@component/store/store";
+import Link from "next/link";
 import React from "react";
 import { FaDesktop, FaMobileAlt, FaXbox } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
@@ -17,9 +18,9 @@ const ProjectModal = (): JSX.Element | null => {
     dispatch(closeProjectModal());
   };
 
-  const icon = [
-    { label: FaDesktop, alt: "Desktop Compatible" },
-    { label: FaMobileAlt, alt: "Mobile Compatible" },
+  const icons = [
+    { label: <FaDesktop />, alt: "Desktop Compatible" },
+    { label: <FaMobileAlt />, alt: "Mobile Compatible" },
   ];
 
   return (
@@ -36,9 +37,16 @@ const ProjectModal = (): JSX.Element | null => {
         <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none z-60 p-5 overflow-hidden">
           {/*header*/}
           <div className="flex items-start justify-between p-2 md:p-5 border-b border-solid border-slate-200 rounded-t">
-            <h3 className="text-xl lg:text-2xl font-semibold">
-              {projectData.title}
-            </h3>
+            <div className="inline-flex items-center">
+              <h3 className="text-xl lg:text-2xl font-semibold">
+                {projectData.title}
+              </h3>
+              {icons.map((icon) => (
+                <span key={icon.alt} className="pl-1 text-xl opacity-50">
+                  {icon.label}
+                </span>
+              ))}
+            </div>
             <button
               className="p-1 ml-auto bg-transparent border-0 text-black opacity-30 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
               onClick={handleCloseModal}
@@ -92,20 +100,24 @@ const ProjectModal = (): JSX.Element | null => {
           {/*footer*/}
           <div className="flex items-center justify-between pt-1 md:p-6 border-t border-solid border-slate-200 rounded-b">
             <div className="w-full">
-              <button
+              <Link
                 className="whitespace-nowrap w-full md:w-auto bg-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 type="button"
-                // onClick={handleCloseModal}
+                href={projectData.links.github}
+                target="_blank"
+                rel="noreferrer"
               >
                 View Code
-              </button>
-              <button
+              </Link>
+              <Link
                 className="whitespace-nowrap w-full md:w-auto bg-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 type="button"
-                // onClick={handleCloseModal}
+                href={projectData.links.website}
+                target="_blank"
+                rel="noreferrer"
               >
                 Visit Site
-              </button>
+              </Link>
             </div>
             <button
               className="hidden md:block bg-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 "

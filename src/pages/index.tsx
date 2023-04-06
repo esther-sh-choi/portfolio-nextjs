@@ -18,27 +18,6 @@ export default function Home() {
   );
   const isOpen = useSelector((state: RootState) => state.project.isOpen);
 
-  // function disableScroll() {
-  //   // Get the current page scroll position
-  //   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  //   const scrollLeft =
-  //     window.pageXOffset || document.documentElement.scrollLeft;
-
-  //   // if any scroll is attempted,
-  //   // set this to the previous value
-  //   window.onscroll = function () {
-  //     window.scrollTo(scrollLeft, scrollTop);
-  //   };
-  // }
-
-  // function enableScroll() {
-  //   window.onscroll = function () {};
-  // }
-
-  // useEffect(() => {
-  //   !isOpen ? enableScroll() : disableScroll();
-  // }, [isOpen]);
-
   return (
     <>
       <Head>
@@ -47,7 +26,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="h-screen w-full fixed top-0 z-0 hidden lg:block">
+      <div className="h-screen w-full fixed top-0 z-70 lg:block">
         <CanvasContainer />
       </div>
       <Navbar />

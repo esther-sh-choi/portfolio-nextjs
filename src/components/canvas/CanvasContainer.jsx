@@ -1,5 +1,5 @@
 import Bedroom from "./Bedroom1";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment, OrbitControls, ContactShadows } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { useState, useEffect } from "react";
 
@@ -28,7 +28,7 @@ const CanvasContainer = () => {
   }, []);
 
   return (
-    <Canvas clssName="z-0">
+    <Canvas clssName="z-0" shadows="basic">
       <OrbitControls
         enableZoom={false}
         enablePan={false}
@@ -36,7 +36,9 @@ const CanvasContainer = () => {
         // maxAzimuthAngle={Math.PI / 2}
         // minAzimuthAngle={Math.PI / 4}
       />
+
       <Bedroom isMobile={isMobile} />
+
       <Environment preset="lobby" />
     </Canvas>
   );

@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 const Bedroom = ({ isMobile }) => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   const { scene: bedroomScene } = useGLTF("/assets/models/bedroom.glb");
-  const { scene, camera } = useThree();
+  const { camera } = useThree();
   const isOpen = useSelector((state) => state.project.isOpen);
 
   let tl = gsap.timeline();
@@ -25,6 +25,7 @@ const Bedroom = ({ isMobile }) => {
           x: 0.12983012272721967,
           y: 0.4459620018409872,
           z: 5.813218278397693,
+          scale: isMobile ? 0.7 : 0.8,
           scrollTrigger: {
             trigger: "#home",
             // pin: "#home",
@@ -33,10 +34,9 @@ const Bedroom = ({ isMobile }) => {
             end: "top top",
             scrub: true,
             immediateRender: false,
-            markers: true,
             snap: {
               snapTo: "#home", // snap to the closest label in the timeline
-              duration: { min: 0.2, max: 1 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+              duration: { min: 0.2, max: 0.5 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
               delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
               ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
             },
@@ -58,12 +58,11 @@ const Bedroom = ({ isMobile }) => {
             // pin: "#about",
             pinSpacing: false,
             immediateRender: false,
-            markers: true,
             snap: {
-              snapTo: "#about", // snap to the closest label in the timeline
-              duration: { min: 0.2, max: 1 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-              delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-              ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
+              snapTo: "#about",
+              duration: { min: 0.2, max: 0.5 },
+              delay: 0.2,
+              ease: "power1.inOut",
             },
           },
         })
@@ -83,12 +82,11 @@ const Bedroom = ({ isMobile }) => {
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
-            markers: true,
             snap: {
-              snapTo: "#skills", // snap to the closest label in the timeline
-              duration: { min: 0.2, max: 1 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-              delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-              ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
+              snapTo: "#skills",
+              duration: { min: 0.2, max: 0.5 },
+              delay: 0.2,
+              ease: "power1.inOut",
             },
           },
         })
@@ -108,12 +106,11 @@ const Bedroom = ({ isMobile }) => {
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
-            markers: true,
             snap: {
-              snapTo: "#projects", // snap to the closest label in the timeline
-              duration: { min: 0.2, max: 1 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-              delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-              ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
+              snapTo: "#projects",
+              duration: { min: 0.2, max: 0.5 },
+              delay: 0.2,
+              ease: "power1.inOut",
             },
           },
         })
@@ -123,8 +120,9 @@ const Bedroom = ({ isMobile }) => {
     !isOpen
       ? tl.to(camera.position, {
           x: -0.036012678122319,
-          y: 0.06005036637699721,
-          z: 0.06399400225061104,
+          y: isMobile ? 0.11 : 0.06005036637699721,
+          z: isMobile ? 0.07 : 0.06399400225061104,
+          scale: isMobile ? 2 : 0.8,
           scrollTrigger: {
             trigger: "#contact",
             start: "top bottom",
@@ -133,12 +131,11 @@ const Bedroom = ({ isMobile }) => {
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
-            markers: true,
             snap: {
-              snapTo: "#contact", // snap to the closest label in the timeline
-              duration: { min: 0.2, max: 1 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-              delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-              ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
+              snapTo: "#contact",
+              duration: { min: 0.2, max: 0.5 },
+              delay: 0.2,
+              ease: "power1.inOut",
             },
           },
         })
@@ -149,8 +146,7 @@ const Bedroom = ({ isMobile }) => {
       <directionalLight castShadow position={[-7, 0, 0.6]} color="#fffceb" />
       <primitive
         object={bedroomScene}
-        scale={isMobile ? 0.6 : 0.8}
-        position={[1, -2, -2]}
+        position={isMobile ? [1, -4, -2] : [1, -2, -2]}
         rotation={[0, -Math.PI * 0.9, 0]}
       />
     </>

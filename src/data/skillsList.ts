@@ -2,13 +2,16 @@ import auth0 from "../../public/skills/auth0.png";
 import aws from "../../public/skills/aws.png";
 import bootstrap from "../../public/skills/bootstrap.png";
 import css from "../../public/skills/css.png";
+import cypress from "../../public/skills/cypress.png";
 import express from "../../public/skills/express.png";
 import firebase from "../../public/skills/firebase.png";
 import github from "../../public/skills/github.png";
 import gsap from "../../public/skills/gsap.png";
 import html from "../../public/skills/html.png";
 import js from "../../public/skills/javascript.png";
+import jest from "../../public/skills/jest.png";
 import jira from "../../public/skills/jira.png";
+import mocha from "../../public/skills/mocha.png";
 import mongo from "../../public/skills/mongo.png";
 import mui from "../../public/skills/mui.png";
 import nextjs from "../../public/skills/nextjs.png";
@@ -23,6 +26,7 @@ import react from "../../public/skills/react.png";
 import redux from "../../public/skills/redux.png";
 import sass from "../../public/skills/sass.png";
 import socketio from "../../public/skills/socket-io.png";
+import storybook from "../../public/skills/storybook.png";
 import tailwind from "../../public/skills/tailwind.png";
 import typescript from "../../public/skills/typescript.png";
 
@@ -42,7 +46,7 @@ export const skills = [
   { id: "next", name: "Next.js", src: nextjs },
   { id: "socketio", name: "Socket.IO", src: socketio },
   { id: "redux", name: "Redux Toolkit", src: redux },
-  { id: "redux", name: "RTK Query", src: redux },
+  { id: "rtkQuery", name: "RTK Query", src: redux },
   { id: "rbd", name: "React Beautiful Dnd", src: rbd },
   { id: "auth0", name: "Auth0", src: auth0 },
   { id: "openai", name: "OpenAI", src: openai },
@@ -50,6 +54,10 @@ export const skills = [
   { id: "prisma", name: "Prisma", src: prisma },
   { id: "gsap", name: "GreenSock", src: gsap },
   { id: "jira", name: "Jira", src: jira },
+  { id: "cypress", name: "Cypress", src: cypress },
+  { id: "mocha", name: "Mocha&Chai", src: mocha },
+  { id: "jest", name: "Jest", src: jest },
+  { id: "storybook", name: "Storybook", src: storybook },
 ];
 
 const others = [{ id: "rails", name: "Ruby on Rails", src: rails }];

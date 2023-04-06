@@ -42,10 +42,12 @@ const Contact = () => {
       className="h-screen z-20 flex items-center justify-center"
     >
       <div className="w-full h-full mx-5 flex flex-col justify-center lg:w-[800px] z-20">
-        <p className="text-xl tracking-widest uppercase text-[#eb4971]">
+        <p className="text-xl tracking-widest uppercase text-[#eb4971] drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
           Contact
         </p>
-        <h2 className="py-2 md:py-4 text-[#eb4971]">Coffee chat?</h2>
+        <h2 className="py-2 md:py-4 text-[#eb4971] drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
+          Coffee chat?
+        </h2>
 
         <div className="h-100 w-100 shadow-lg rounded-xl p-5 sm:p-7 bg-white bg-opacity-80">
           <form className="flex flex-col items-center" onSubmit={handleSubmit}>

@@ -8,11 +8,13 @@ const Skills = () => {
       id="skills"
       className="md:h-screen flex justify-start md:items-center z-20"
     >
-      <div className="max-w-[1240px] w-[80%] lg:w-[50%] lg:ml-20 px-2 py-16 z-20 mx-auto">
-        <p className="text-xl tracking-widest uppercase text-[#eb4971]">
+      <div className="mt-[50px] md:mt-0 max-w-[1240px] w-[80%] lg:w-[50%] lg:ml-20 px-2 py-16 z-20 mx-auto">
+        <p className="text-xl tracking-widest uppercase text-[#eb4971] drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
           Skills
         </p>
-        <h2 className="py-2 md:py-4 text-[#eb4971]">What I can do</h2>
+        <h2 className="py-2 md:py-4 text-[#eb4971] drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
+          What I can do
+        </h2>
         <div className="p-4 rounded-xl grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-8 bg-[#ffae42] bg-opacity-50 shadow-xl">
           {skills.map((skill) => (
             <div
