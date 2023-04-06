@@ -26,21 +26,21 @@ const Bedroom = ({ isMobile }) => {
           y: 0.4459620018409872,
           z: 5.813218278397693,
           scale: isMobile ? 0.7 : 0.8,
-          // scrollTrigger: {
-          //   trigger: "#home",
-          //   // pin: "#home",
-          //   pinSpacing: false,
-          //   start: "top center",
-          //   end: "top top",
-          //   scrub: true,
-          //   immediateRender: false,
-          //   snap: {
-          //     snapTo: "#home", // snap to the closest label in the timeline
-          //     duration: { min: 0.2, max: 0.5 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-          //     delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-          //     ease: "power1", // the ease of the snap animation ("power3" by default)
-          //   },
-          // },
+          scrollTrigger: {
+            trigger: "#home",
+            // pin: "#home",
+            pinSpacing: false,
+            start: "top 80%",
+            end: "top top",
+            scrub: true,
+            immediateRender: false,
+            snap: {
+              snapTo: "#home", // snap to the closest label in the timeline
+              duration: { min: 0.2, max: 0.5 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+              delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+              ease: "power1", // the ease of the snap animation ("power3" by default)
+            },
+          },
         })
       : tl.pause();
 
