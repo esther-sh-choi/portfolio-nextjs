@@ -26,7 +26,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="h-screen w-full fixed top-0 z-70 lg:block">
+      <div className="h-screen w-full fixed top-0 z-0 lg:block">
         <CanvasContainer />
       </div>
       <Navbar />

@@ -41,7 +41,7 @@ const Projects = () => {
                   handleOpenProject(project)
                 }
               >
-                <div className="w-[101%] image">
+                <div className="w-[101%] max-h-[50%] image">
                   <img
                     className="object-cover h-[100%]"
                     src={project.image.src}
