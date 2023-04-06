@@ -3,14 +3,14 @@ import React from "react";
 const About = () => {
   return (
     <div id="about" className="h-screen flex items-center z-20">
-      <div className="max-w-[90%] mx-auto lg:w-[70vw] lg:max-w-[1000px] z-20 ">
+      <div className="max-w-[80%] mx-auto lg:w-[70vw] lg:max-w-[1000px] z-20 ">
         <p className="text-xl trakcing-widest uppercase text-[#eb4971] drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
           About Me
         </p>
         <h2 className="text-[#eb4971] mb-5 drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
           Welcome to my virtual room!
         </h2>
-        <div className="max-h-[60vh] overflow-auto bg-white bg-opacity-70 p-10 rounded-xl m-auto">
+        <div className="max-h-[50vh] lg:max-h-[60vh] overflow-auto bg-white bg-opacity-70 p-10 rounded-xl m-auto">
           <p className="whitespace-pre-line text-sm md:text-md lg:text-lg">
             Hi, I&apos;m Esther Choi. I am a software developer and an Ontario
             certified teacher who previously worked for York Region District
