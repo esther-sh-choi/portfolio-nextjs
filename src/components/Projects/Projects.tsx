@@ -36,10 +36,8 @@ const Projects = () => {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="flex flex-col items-center justify-center w-full shadow-lg rounded-xl group bg-white hover:bg-gradient-to-r from-orange-300 to-yellow-200 hover:cursor-pointer overflow-hidden"
-                onClick={(_e: React.MouseEvent<HTMLDivElement>) =>
-                  handleOpenProject(project)
-                }
+                className="flex flex-col items-center justify-center w-full shadow-lg rounded-xl group bg-white hover:bg-gradient-to-r from-orange-300 to-yellow-200 hover:cursor-pointer overflow-hidden min-h-[350px]"
+                onClick={() => handleOpenProject(project)}
               >
                 <div className="w-[101%] image">
                   <img
@@ -48,7 +46,7 @@ const Projects = () => {
                     alt={project.image.alt}
                   />
                 </div>
-                <div className="text-center p-4 flex flex-col items-center justify-center text-sm lg:text-md ">
+                <div className="text-center p-4 flex-1 flex flex-col items-center justify-center text-sm lg:text-md ">
                   <div>{project.title}</div>
                   <div className="click mt-10 hidden font-bold">
                     Click for details
