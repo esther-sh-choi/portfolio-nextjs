@@ -44,7 +44,7 @@ const Bedroom = ({ isMobile }) => {
         })
       : tl.pause();
 
-    // Bed - About me
+    // Bed - put me
     !isOpen
       ? tl.to(camera.position, {
           x: -0.011110440161001383,

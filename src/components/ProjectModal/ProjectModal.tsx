@@ -37,12 +37,12 @@ const ProjectModal = (): JSX.Element | null => {
         <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none z-60 p-5 overflow-hidden">
           {/*header*/}
           <div className="flex items-start justify-between p-2 md:p-5 border-b border-solid border-slate-200 rounded-t">
-            <div className="inline-flex items-center">
-              <h3 className="text-xl lg:text-2xl font-semibold">
+            <div className="flex flex-wrap items-center">
+              <h3 className="text-xl lg:text-2xl mr-1 font-semibold">
                 {projectData.title}
               </h3>
               {icons.map((icon) => (
-                <span key={icon.alt} className="pl-1 text-xl opacity-50">
+                <span key={icon.alt} className="mx-[2px] text-xl opacity-50">
                   {icon.label}
                 </span>
               ))}
@@ -98,10 +98,10 @@ const ProjectModal = (): JSX.Element | null => {
           </div>
 
           {/*footer*/}
-          <div className="flex items-center justify-between pt-1 md:p-6 border-t border-solid border-slate-200 rounded-b">
+          <div className="flex items-center justify-between pt-1 md:p-6 rounded-b">
             <div className="w-full">
               <Link
-                className="whitespace-nowrap w-full md:w-auto bg-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                className="whitespace-nowrap w-full md:w-auto bg-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 text-center"
                 type="button"
                 href={projectData.links.github}
                 target="_blank"
@@ -110,7 +110,7 @@ const ProjectModal = (): JSX.Element | null => {
                 View Code
               </Link>
               <Link
-                className="whitespace-nowrap w-full md:w-auto bg-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                className="whitespace-nowrap w-full md:w-auto bg-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 text-center"
                 type="button"
                 href={projectData.links.website}
                 target="_blank"
@@ -120,7 +120,7 @@ const ProjectModal = (): JSX.Element | null => {
               </Link>
             </div>
             <button
-              className="hidden md:block bg-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 "
+              className="hidden md:block bg-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 text-center"
               type="button"
               onClick={handleCloseModal}
             >
