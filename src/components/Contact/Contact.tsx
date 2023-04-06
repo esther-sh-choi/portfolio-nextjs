@@ -37,12 +37,15 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="h-screen z-20">
-      <div className="m-5 sm:m-20 md:m-auto flex flex-col justify-center h-full max-w-xl z-20">
-        <p className="text-xl tracking-widest uppercase text-[#f43f5e]">
+    <div
+      id="contact"
+      className="h-screen z-20 flex items-center justify-center"
+    >
+      <div className="w-full h-full mx-5 flex flex-col justify-center lg:w-[800px] z-20">
+        <p className="text-xl tracking-widest uppercase text-[#eb4971]">
           Contact
         </p>
-        <h2 className="py-4">How about some coffee?</h2>
+        <h2 className="py-2 md:py-4 text-[#eb4971]">Coffee chat?</h2>
 
         <div className="h-100 w-100 shadow-lg rounded-xl p-5 sm:p-7 bg-white bg-opacity-80">
           <form className="flex flex-col items-center" onSubmit={handleSubmit}>

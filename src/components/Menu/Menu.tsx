@@ -1,5 +1,6 @@
 import { routes } from "../routes";
 import { styles } from "./MenuStyles";
+import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -26,19 +27,33 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }: MenuProps): JSX.Element => {
       <div className={isMenuOpen ? styles.navbarMenu : styles.navbarMenuClosed}>
         <div className={styles.menuHeader}>
           <Image src="/assets/navLogo.svg" width="87" height="35" alt="/" />
-          <div className={styles.closeBtn} onClick={handleMenuClose}>
-            <AiOutlineClose size={25} />
-          </div>
+          <button
+            className="p-1 ml-auto bg-transparent border-0 text-black opacity-30 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+            onClick={handleMenuClose}
+          >
+            <span className="bg-transparent text-black h-6 w-6 text-2xl block outline-none focus:outline-none">
+              ×
+            </span>
+          </button>
         </div>
         <div className={styles.divider}></div>
         <div className={styles.menuMain}>
-          <ul className="uppercase">
+          <div className="flex flex-col justify-center items-center ">
             {routes.map((route) => (
-              <Link href={route.path} key={route.id}>
-                <li className={styles.menuLink}>{route.name}</li>
-              </Link>
+              <button
+                className="cursor-pointer my-3 uppercase"
+                onClick={() => {
+                  gsap.to(window, {
+                    scrollTo: `#${route.id}`,
+                    ease: "power1.inOut",
+                  });
+                }}
+                key={route.id}
+              >
+                {route.name}
+              </button>
             ))}
-          </ul>
+          </div>
         </div>
         <div className={styles.menuFooter}>
           <h4 className={styles.footerTitle}>Let's connect</h4>

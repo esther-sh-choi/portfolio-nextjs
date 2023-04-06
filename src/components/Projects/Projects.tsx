@@ -23,18 +23,18 @@ const Projects = () => {
     <>
       <div
         id="projects"
-        className="md:h-screen flex justify-end md:items-center z-20"
+        className="md:h-screen flex justify-end md:mt-[100px] z-20"
       >
-        <div className="max-w-[1240px] w-[90%] mx-auto lg:w-[40%] lg:mr-20 px-2 py-16 z-20">
-          <p className="text-xl trakcing-widest uppercase text-[#ff1f45] text-right">
+        <div className="h-full max-w-[1240px] w-[90%] mx-auto lg:mx-0 lg:w-[50%] lg:mr-20 px-2 z-20 flex flex-col justify-center items-end">
+          <p className="text-xl trakcing-widest uppercase text-[#eb4971] text-right ">
             Projects
           </p>
-          <h2 className="py-4 text-right text-[#ff1f45]">What I've Built</h2>
-          <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4 bg-[#ff738b] bg-opacity-70 p-4 shadow-xl rounded-xl">
+          <h2 className="py-2 text-right text-[#eb4971]">What I've Built</h2>
+          <div className="mt-2 md:mt-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4 bg-[#ff738b] bg-opacity-70 p-4 shadow-xl rounded-xl">
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="flex flex-col items-center justify-center lg:h-72 w-full shadow-lg rounded-xl group bg-white hover:bg-gradient-to-r from-orange-300 to-[#ff738b] hover:cursor-pointer overflow-hidden"
+                className="flex flex-col items-center justify-center lg:h-64 xl:h-72 w-full shadow-lg rounded-xl group bg-white hover:bg-gradient-to-r from-orange-300 to-yellow-200 hover:cursor-pointer overflow-hidden min-h-[400px] lg:min-h-[300px]"
                 onClick={(_e: React.MouseEvent<HTMLDivElement>) =>
                   handleOpenProject(project)
                 }
@@ -46,7 +46,7 @@ const Projects = () => {
                     alt={project.image.alt}
                   />
                 </div>
-                <div className="text-center p-4 flex-1 flex flex-col items-center justify-center">
+                <div className="text-center p-4 flex-1 flex flex-col items-center justify-center text-sm lg:text-md">
                   <div>{project.title}</div>
                   <div className="click mt-10 hidden font-bold">
                     Click for details

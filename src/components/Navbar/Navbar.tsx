@@ -28,16 +28,16 @@ const Navbar = () => {
   //   }
   // }, [router]);
 
-  // useEffect(() => {
-  //   const handleShadow = () => {
-  //     if (window.scrollY >= 90) {
-  //       setShadow(true);
-  //     } else {
-  //       setShadow(false);
-  //     }
-  //   };
-  //   window.addEventListener("scroll", handleShadow);
-  // }, []);
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener("scroll", handleShadow);
+  }, []);
 
   const handleMenuOpen = () => {
     setIsMenuOpen(true);
@@ -45,11 +45,12 @@ const Navbar = () => {
 
   return (
     <div
-      className={`${styles.navbarContainer} ${shadow ? "shadow-lg" : ""}`}
-      style={{ backgroundColor: `${navBackground}` }}
+      className={`${styles.navbarContainer} ${
+        shadow ? "shadow-lg" : ""
+      } bg-white md:bg-transparent md:shadow-none`}
     >
       <div className={styles.navbarContent}>
-        <Image src={logo} alt="/" width="70" height="70" />
+        <Image src={logo} alt="/" width="50" height="50" />
         <div>
           <ul
             className={styles.navbarLinkContainer}
