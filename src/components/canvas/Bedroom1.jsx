@@ -38,7 +38,7 @@ const Bedroom = ({ isMobile }) => {
               snapTo: "#home", // snap to the closest label in the timeline
               duration: { min: 0.2, max: 0.5 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
               delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-              ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
+              ease: "power1", // the ease of the snap animation ("power3" by default)
             },
           },
         })
@@ -62,7 +62,7 @@ const Bedroom = ({ isMobile }) => {
               snapTo: "#about",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
-              ease: "power1.inOut",
+              ease: "power1",
             },
           },
         })
@@ -86,7 +86,7 @@ const Bedroom = ({ isMobile }) => {
               snapTo: "#skills",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
-              ease: "power1.inOut",
+              ease: "power1",
             },
           },
         })
@@ -110,7 +110,7 @@ const Bedroom = ({ isMobile }) => {
               snapTo: "#projects",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
-              ease: "power1.inOut",
+              ease: "power1",
             },
           },
         })
@@ -135,7 +135,7 @@ const Bedroom = ({ isMobile }) => {
               snapTo: "#contact",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
-              ease: "power1.inOut",
+              ease: "power1",
             },
           },
         })
