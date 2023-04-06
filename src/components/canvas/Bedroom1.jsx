@@ -27,11 +27,11 @@ const Bedroom = ({ isMobile }) => {
           z: 5.813218278397693,
           scale: isMobile ? 0.7 : 0.8,
           scrollTrigger: {
-            trigger: "#home",
+            // trigger: "#home",
             // pin: "#home",
             pinSpacing: false,
-            start: "top bottom",
-            end: "top top",
+            // start: "top bottom",
+            // end: "top top",
             scrub: true,
             immediateRender: false,
             // snap: {
