@@ -33,6 +33,7 @@ const CanvasContainer = () => {
         enableZoom={false}
         enablePan={false}
         enableDamping={true}
+        enableRotate={false}
         // maxAzimuthAngle={Math.PI / 2}
         // minAzimuthAngle={Math.PI / 4}
       />
