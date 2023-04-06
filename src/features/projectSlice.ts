@@ -1,6 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { IconType } from "react-icons";
-import { FaMobileAlt, FaDesktop } from "react-icons/fa";
 
 type ProjectDataType = {
   id: number;
@@ -28,10 +26,6 @@ export interface ProjectState {
 const initialState: ProjectState = {
   projectData: {
     id: 0,
-    icon: [
-      { label: FaDesktop, alt: "Desktop Compatible" },
-      { label: FaMobileAlt, alt: "Mobile Compatible" },
-    ],
     title: "",
     skills: [],
     description: "",
