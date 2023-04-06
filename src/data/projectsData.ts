@@ -98,7 +98,7 @@ export const projects = [
       "Created a user-authenticated app for sharing virtual fireplaces via unique links. Both users and visitors can hang stockings on other's fireplaces but must be registered to create their own fireplace.",
     technology: [
       "Implemented a countdown until Christmas midnight and prevented stockings from being opened before then.",
-      "•Collaborated with a backend developer and 2 designers as the main frontend developer of the team - Jira & Zeplin.",
+      "Collaborated with a backend developer and 2 designers as the main frontend developer of the team - Jira & Zeplin.",
     ],
     image: {
       src: jollymessages,

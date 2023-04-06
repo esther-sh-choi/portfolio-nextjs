@@ -23,29 +23,13 @@ const Projects = () => {
     <>
       <div
         id="projects"
-        className="h-screen flex justify-end items-center z-20"
+        className="md:h-screen flex justify-end md:items-center z-20"
       >
-        <div className="max-w-[1240px] w-full lg:w-[40%] mr-20 px-2 py-16 z-20">
+        <div className="max-w-[1240px] w-[90%] mx-auto lg:w-[40%] lg:mr-20 px-2 py-16 z-20">
           <p className="text-xl trakcing-widest uppercase text-[#ff1f45] text-right">
             Projects
           </p>
           <h2 className="py-4 text-right text-[#ff1f45]">What I've Built</h2>
-          {/* <div className="w-full h-[400px]">
-          <Carousel slideInterval={10000}>
-            {projects.map((project) => (
-              <div
-                key={project.id}
-                className="px-10 md:px-20 h-full flex justify-center bg-slate-500 rounded-2xl shadow-inner"
-              >
-                <img
-                  className="h-[100%] w-full md:w-[80%] object-cover"
-                  src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-                  alt={project.title}
-                />
-              </div>
-            ))}
-          </Carousel>
-        </div> */}
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4 bg-[#ff738b] bg-opacity-70 p-4 shadow-xl rounded-xl">
             {projects.map((project) => (
               <div
@@ -55,9 +39,9 @@ const Projects = () => {
                   handleOpenProject(project)
                 }
               >
-                <div className="w-[100%] h-[60%] image">
+                <div className="w-[101%] image">
                   <img
-                    className="object-cover w-auto h-[100%]"
+                    className="object-cover h-[100%]"
                     src={project.image.src}
                     alt={project.image.alt}
                   />
