@@ -126,8 +126,8 @@ const Bedroom = ({ isMobile }) => {
           scrollTrigger: {
             trigger: "#contact",
             start: "top bottom",
-            end: "top 10%",
-            pin: "#contact",
+            end: "top 20%",
+            // pin: "#contact",
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
