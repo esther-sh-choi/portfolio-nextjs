@@ -1,5 +1,5 @@
 export const styles = {
-  navbarContainer: "fixed w-full h-20 z-10",
+  navbarContainer: "fixed w-full h-20 z-30",
   navbarContent:
     "flex justify-between items-center w-full h-full px-10 2xl:px-16",
   navbarLinkContainer: "hidden md:flex",

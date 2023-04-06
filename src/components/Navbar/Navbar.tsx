@@ -5,7 +5,6 @@ import { styles } from "./NavbarStyles";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
