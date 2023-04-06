@@ -58,18 +58,33 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }: MenuProps): JSX.Element => {
         <div className={styles.menuFooter}>
           <h4 className={styles.footerTitle}>Let&apos;s connect</h4>
           <div className={styles.connectIconContainer}>
-            <div className={styles.connectIcon}>
+            <Link
+              className={styles.connectIcon}
+              type="button"
+              href="https://www.linkedin.com/in/esther--choi/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaLinkedinIn />
-            </div>
-            <div className={styles.connectIcon}>
+            </Link>
+            <Link
+              className={styles.connectIcon}
+              type="button"
+              href="https://github.com/esther-sh-choi"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaGithub />
-            </div>
-            <div className={styles.connectIcon}>
+            </Link>
+            <Link
+              className={styles.connectIcon}
+              type="button"
+              href="mailto:estherchoi.sh@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <AiOutlineMail />
-            </div>
-            <div className={styles.connectIcon}>
-              <BsFillPersonLinesFill />
-            </div>
+            </Link>
           </div>
         </div>
       </div>
