@@ -78,7 +78,7 @@ const Bedroom = ({ isSmallScreen }) => {
           z: 0.0005459788201534593,
           scrollTrigger: {
             trigger: "#skills",
-            start: "top bottom",
+            start: "top 99%",
             end: "top top",
             // pin: "#skills",
             pinSpacing: false,
