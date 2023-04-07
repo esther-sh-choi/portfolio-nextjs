@@ -13,6 +13,7 @@ html {
 
 @layer base {
   body {
+    -webkit-overflow-scrolling: auto;
     /* background: rgb(255, 185, 194); */
     background: white;
     /* background: linear-gradient(158deg, #70739e 0%, #496a6c 25%, #70739e 100%); */
