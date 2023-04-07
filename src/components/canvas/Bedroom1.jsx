@@ -31,8 +31,8 @@ const Bedroom = ({ isSmallScreen }) => {
             trigger: "#home",
             // pin: "#home",
             pinSpacing: false,
-            start: "top bottom",
-            end: "top 1px",
+            start: "top 99%",
+            end: "top 1%",
             scrub: true,
             immediateRender: false,
             snap: isBrowser && {
@@ -53,8 +53,8 @@ const Bedroom = ({ isSmallScreen }) => {
           z: 0.01601712490957726,
           scrollTrigger: {
             trigger: "#about",
-            start: "top bottom",
-            end: "top 1px",
+            start: "top 99%",
+            end: "top 1%",
             scrub: true,
             // pin: "#about",
             pinSpacing: false,
@@ -77,8 +77,8 @@ const Bedroom = ({ isSmallScreen }) => {
           z: 0.0005459788201534593,
           scrollTrigger: {
             trigger: "#skills",
-            start: "top bottom",
-            end: "top 1px",
+            start: "top 99%",
+            end: "top 1%",
             // pin: "#skills",
             pinSpacing: false,
             scrub: true,
@@ -101,9 +101,9 @@ const Bedroom = ({ isSmallScreen }) => {
           z: 0.0015648388487006014,
           scrollTrigger: {
             trigger: "#projects",
-            start: "top bottom",
-            end: "top 1px",
-            markers: true,
+            start: "top 99%",
+            end: "top 1%",
+            // markers: true,
             // pin: "#projects",
             pinSpacing: false,
             scrub: true,
@@ -126,43 +126,19 @@ const Bedroom = ({ isSmallScreen }) => {
           z: isSmallScreen ? 0.02 : 0.03399400225061104,
           scrollTrigger: {
             trigger: "#contact",
-            start: "top bottom",
-            end: "top 1px",
+            start: "top 99%",
+            end: "top 1%",
             // pin: "#contact",
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
-            markers: true,
+            // markers: true,
             snap: isBrowser && {
               snapTo: "#contact",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
               ease: "power1",
             },
-          },
-        })
-      : tl.pause();
-
-    !isOpen
-      ? tl.to(camera.position, {
-          x: isSmallScreen ? -0.01 : -0.016012678122319,
-          y: isSmallScreen ? 0.05 : 0.05005036637699721,
-          z: isSmallScreen ? 0.02 : 0.03399400225061104,
-          scrollTrigger: {
-            trigger: "#contact",
-            start: "top 1px",
-            // end: "top 1px",
-            // pin: "#contact",
-            pinSpacing: false,
-            scrub: true,
-            immediateRender: false,
-            markers: true,
-            // snap: isBrowser && {
-            //   snapTo: "#contact",
-            //   duration: { min: 0.2, max: 0.5 },
-            //   delay: 0.2,
-            //   ease: "power1",
-            // },
           },
         })
       : tl.pause();
