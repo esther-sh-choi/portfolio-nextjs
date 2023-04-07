@@ -4,7 +4,6 @@ import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { useLayoutEffect } from "react";
-import { isBrowser } from "react-device-detect";
 import { useSelector } from "react-redux";
 
 const Bedroom = ({ isSmallScreen }) => {
@@ -35,7 +34,7 @@ const Bedroom = ({ isSmallScreen }) => {
             end: "top 1%",
             scrub: true,
             immediateRender: false,
-            snap: isBrowser && {
+            snap: !isSmallScreen && {
               snapTo: "#home", // snap to the closest label in the timeline
               duration: { min: 0.2, max: 0.5 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
               delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
@@ -59,7 +58,7 @@ const Bedroom = ({ isSmallScreen }) => {
             // pin: "#about",
             pinSpacing: false,
             immediateRender: false,
-            snap: isBrowser && {
+            snap: !isSmallScreen && {
               snapTo: "#about",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
@@ -83,7 +82,7 @@ const Bedroom = ({ isSmallScreen }) => {
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
-            snap: isBrowser && {
+            snap: !isSmallScreen && {
               snapTo: "#skills",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
@@ -108,7 +107,7 @@ const Bedroom = ({ isSmallScreen }) => {
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
-            snap: isBrowser && {
+            snap: !isSmallScreen && {
               snapTo: "#projects",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
@@ -133,7 +132,7 @@ const Bedroom = ({ isSmallScreen }) => {
             scrub: true,
             immediateRender: false,
             // markers: true,
-            snap: isBrowser && {
+            snap: !isSmallScreen && {
               snapTo: "#contact",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
@@ -148,7 +147,7 @@ const Bedroom = ({ isSmallScreen }) => {
       <directionalLight castShadow position={[-7, 0, 0.6]} color="#fffceb" />
       <primitive
         object={bedroomScene}
-        position={isBrowser ? [1, -4, -2] : [1, -2, -2]}
+        position={!isSmallScreen ? [1, -4, -2] : [1, -2, -2]}
         rotation={[0, -Math.PI * 0.9, 0]}
       />
     </>
