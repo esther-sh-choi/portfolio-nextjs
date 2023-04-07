@@ -43,7 +43,7 @@ const Main = () => {
             </div>
             <div className="hidden lg:flex mt-10 ">
               <Link
-                className="z-20 w-[150px] bg-gradient-to-r from-rose-300 to-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none text-center"
+                className="z-20 w-[150px] bg-gradient-to-r from-rose-300 to-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow-md hover:shadow-lg outline-none text-center"
                 type="button"
                 href="https://flowcv.com/resume/0lnv2aak4d"
                 target="_blank"
@@ -52,7 +52,7 @@ const Main = () => {
                 Resume
               </Link>
               <Link
-                className="z-20 w-[150px] mx-3 bg-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none text-center"
+                className="z-20 w-[150px] mx-3 bg-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow-md hover:shadow-lg outline-none text-center"
                 type="button"
                 href="https://www.linkedin.com/in/esther--choi/"
                 target="_blank"
@@ -61,7 +61,7 @@ const Main = () => {
                 LinkedIn
               </Link>
               <Link
-                className="z-20 w-[150px] bg-gradient-to-l from-rose-300 to-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none text-center"
+                className="z-20 w-[150px] bg-gradient-to-l from-rose-300 to-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow-md hover:shadow-lg outline-none text-center"
                 type="button"
                 href="https://github.com/esther-sh-choi"
                 target="_blank"
