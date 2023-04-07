@@ -17,6 +17,7 @@ const Bedroom = () => {
 
   ScrollTrigger.config({
     limitCallbacks: true,
+    ignoreMobileResize: true,
   });
 
   useLayoutEffect(() => {
