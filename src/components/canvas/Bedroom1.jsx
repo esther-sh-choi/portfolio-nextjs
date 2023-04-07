@@ -7,7 +7,7 @@ import React, { useLayoutEffect } from "react";
 import { isMobile } from "react-device-detect";
 import { useSelector } from "react-redux";
 
-const Bedroom = () => {
+const Bedroom = ({ isSmallScreen }) => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   const { scene: bedroomScene } = useGLTF("/assets/models/bedroom.glb");
   const { camera } = useThree();
@@ -102,7 +102,7 @@ const Bedroom = () => {
           scrollTrigger: {
             trigger: "#projects",
             start: "top bottom",
-            end: "top 1%",
+            end: "top 1px",
             // pin: "#projects",
             pinSpacing: false,
             scrub: true,
@@ -120,13 +120,13 @@ const Bedroom = () => {
     // Coffee - contact me
     !isOpen
       ? tl.to(camera.position, {
-          x: isMobile ? -0.01 : -0.036012678122319,
-          y: isMobile ? 0.05 : 0.06005036637699721,
-          z: isMobile ? 0.02 : 0.06399400225061104,
+          x: isSmallScreen ? -0.01 : -0.036012678122319,
+          y: isSmallScreen ? 0.05 : 0.06005036637699721,
+          z: isSmallScreen ? 0.02 : 0.06399400225061104,
           scrollTrigger: {
             trigger: "#contact",
             start: "top bottom",
-            end: "top 1%",
+            end: "top 1px",
             // pin: "#contact",
             pinSpacing: false,
             scrub: true,
