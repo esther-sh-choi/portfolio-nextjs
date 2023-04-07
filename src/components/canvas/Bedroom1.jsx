@@ -26,7 +26,7 @@ const Bedroom = ({ isMobile }) => {
           x: 0.12983012272721967,
           y: 0.4459620018409872,
           z: 5.813218278397693,
-          scale: isMobile ? 0.7 : 0.8,
+          scale: 0.8,
           scrollTrigger: {
             trigger: "#home",
             // pin: "#home",
@@ -120,10 +120,9 @@ const Bedroom = ({ isMobile }) => {
     // Coffee - contact me
     !isOpen
       ? tl.to(camera.position, {
-          x: -0.036012678122319,
-          y: isMobile ? 0.11 : 0.06005036637699721,
-          z: isMobile ? 0.07 : 0.06399400225061104,
-          scale: isMobile ? 2 : 0.8,
+          x: isMobile ? -0.01 : -0.036012678122319,
+          y: isMobile ? 0.05 : 0.06005036637699721,
+          z: isMobile ? 0.02 : 0.06399400225061104,
           scrollTrigger: {
             trigger: "#contact",
             start: "top bottom",
