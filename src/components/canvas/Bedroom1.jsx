@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { useLayoutEffect } from "react";
-import { isMobile } from "react-device-detect";
+import { isBrowser } from "react-device-detect";
 import { useSelector } from "react-redux";
 
 const Bedroom = ({ isSmallScreen }) => {
@@ -32,10 +32,10 @@ const Bedroom = ({ isSmallScreen }) => {
             // pin: "#home",
             pinSpacing: false,
             start: "top bottom",
-            end: "top top",
+            end: "top 1px",
             scrub: true,
             immediateRender: false,
-            snap: !isMobile && {
+            snap: isBrowser && {
               snapTo: "#home", // snap to the closest label in the timeline
               duration: { min: 0.2, max: 0.5 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
               delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
@@ -54,12 +54,12 @@ const Bedroom = ({ isSmallScreen }) => {
           scrollTrigger: {
             trigger: "#about",
             start: "top bottom",
-            end: "top top",
+            end: "top 1px",
             scrub: true,
             // pin: "#about",
             pinSpacing: false,
             immediateRender: false,
-            snap: !isMobile && {
+            snap: isBrowser && {
               snapTo: "#about",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
@@ -78,12 +78,12 @@ const Bedroom = ({ isSmallScreen }) => {
           scrollTrigger: {
             trigger: "#skills",
             start: "top bottom",
-            end: "top top",
+            end: "top 1px",
             // pin: "#skills",
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
-            snap: !isMobile && {
+            snap: isBrowser && {
               snapTo: "#skills",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
@@ -103,11 +103,12 @@ const Bedroom = ({ isSmallScreen }) => {
             trigger: "#projects",
             start: "top bottom",
             end: "top 1px",
+            markers: true,
             // pin: "#projects",
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
-            snap: !isMobile && {
+            snap: isBrowser && {
               snapTo: "#projects",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
@@ -120,9 +121,9 @@ const Bedroom = ({ isSmallScreen }) => {
     // Coffee - contact me
     !isOpen
       ? tl.to(camera.position, {
-          x: isSmallScreen ? -0.01 : -0.036012678122319,
-          y: isSmallScreen ? 0.05 : 0.06005036637699721,
-          z: isSmallScreen ? 0.02 : 0.06399400225061104,
+          x: isSmallScreen ? -0.01 : -0.016012678122319,
+          y: isSmallScreen ? 0.05 : 0.05005036637699721,
+          z: isSmallScreen ? 0.02 : 0.03399400225061104,
           scrollTrigger: {
             trigger: "#contact",
             start: "top bottom",
@@ -131,12 +132,37 @@ const Bedroom = ({ isSmallScreen }) => {
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
-            snap: !isMobile && {
+            markers: true,
+            snap: isBrowser && {
               snapTo: "#contact",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
               ease: "power1",
             },
+          },
+        })
+      : tl.pause();
+
+    !isOpen
+      ? tl.to(camera.position, {
+          x: isSmallScreen ? -0.01 : -0.016012678122319,
+          y: isSmallScreen ? 0.05 : 0.05005036637699721,
+          z: isSmallScreen ? 0.02 : 0.03399400225061104,
+          scrollTrigger: {
+            trigger: "#contact",
+            start: "top 1px",
+            // end: "top 1px",
+            // pin: "#contact",
+            pinSpacing: false,
+            scrub: true,
+            immediateRender: false,
+            markers: true,
+            // snap: isBrowser && {
+            //   snapTo: "#contact",
+            //   duration: { min: 0.2, max: 0.5 },
+            //   delay: 0.2,
+            //   ease: "power1",
+            // },
           },
         })
       : tl.pause();
@@ -146,7 +172,7 @@ const Bedroom = ({ isSmallScreen }) => {
       <directionalLight castShadow position={[-7, 0, 0.6]} color="#fffceb" />
       <primitive
         object={bedroomScene}
-        position={isMobile ? [1, -4, -2] : [1, -2, -2]}
+        position={isBrowser ? [1, -4, -2] : [1, -2, -2]}
         rotation={[0, -Math.PI * 0.9, 0]}
       />
     </>
