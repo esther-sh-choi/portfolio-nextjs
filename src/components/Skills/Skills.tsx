@@ -15,7 +15,7 @@ const Skills = () => {
         <h2 className="py-2 md:py-4 text-[#eb4971] drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
           What I can do
         </h2>
-        <div className="p-4 rounded-xl grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-4 bg-[#ffae42] bg-opacity-50 shadow-xl">
+        <div className="p-4 rounded-xl grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-4 bg-[#ffd54c] bg-opacity-60 shadow-xl">
           {skills.map((skill) => (
             <div
               key={skill.id}

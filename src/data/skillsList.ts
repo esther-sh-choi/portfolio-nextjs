@@ -48,6 +48,7 @@ export const skills = [
   { id: "redux", name: "Redux Toolkit", src: redux },
   { id: "rtkQuery", name: "RTK Query", src: redux },
   { id: "rbd", name: "React Beautiful Dnd", src: rbd },
+  { id: "rails", name: "Ruby on Rails", src: rails },
   { id: "auth0", name: "Auth0", src: auth0 },
   { id: "openai", name: "OpenAI", src: openai },
   { id: "puppeteer", name: "Puppeteer", src: puppeteer },
@@ -59,5 +60,3 @@ export const skills = [
   { id: "jest", name: "Jest", src: jest },
   { id: "storybook", name: "Storybook", src: storybook },
 ];
-
-const others = [{ id: "rails", name: "Ruby on Rails", src: rails }];
