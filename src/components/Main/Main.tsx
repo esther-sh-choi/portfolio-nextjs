@@ -2,6 +2,7 @@ import { globalStyles } from "../styles";
 import { styles } from "./MainStyles";
 import Link from "next/link";
 import React from "react";
+import { FaGithub, FaLinkedinIn, FaFileAlt } from "react-icons/fa";
 import TypeIt from "typeit-react";
 
 const Main = () => {
@@ -40,33 +41,67 @@ const Main = () => {
                 }}
               />
             </div>
-            <Link
-              className="mt-0 md:mt-10 z-20 w-[80%] md:w-[200px] bg-gradient-to-b from-rose-300 to-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none text-center"
-              type="button"
-              href="https://flowcv.com/resume/0lnv2aak4d"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Resume
-            </Link>
-            <Link
-              className="mt-2 z-20 w-[80%] md:w-[200px] bg-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none text-center"
-              type="button"
-              href="https://www.linkedin.com/in/esther--choi/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn
-            </Link>
-            <Link
-              className="mt-2 z-20 w-[80%] md:w-[200px] bg-gradient-to-t from-rose-300 to-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none text-center"
-              type="button"
-              href="https://github.com/esther-sh-choi"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Github
-            </Link>
+            <div className="flex-col hidden md:flex">
+              <Link
+                className="mt-0 md:mt-10 z-20 w-[80%] md:w-[200px] bg-gradient-to-b from-rose-300 to-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none text-center"
+                type="button"
+                href="https://flowcv.com/resume/0lnv2aak4d"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Resume
+              </Link>
+              <Link
+                className="mt-2 z-20 w-[80%] md:w-[200px] bg-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none text-center"
+                type="button"
+                href="https://www.linkedin.com/in/esther--choi/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </Link>
+              <Link
+                className="mt-2 z-20 w-[80%] md:w-[200px] bg-gradient-to-t from-rose-300 to-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none text-center"
+                type="button"
+                href="https://github.com/esther-sh-choi"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </Link>
+            </div>
+            <div className="flex items-center justify-between my-4 md:hidden">
+              <Link
+                className="rounded-full shadow-md bg-rose-400 p-3 cursor-pointer hover:scale-110 ease-in duration-200"
+                type="button"
+                href="https://www.linkedin.com/in/esther--choi/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="linkedin"
+              >
+                <FaLinkedinIn />
+              </Link>
+              <Link
+                className="rounded-full shadow-md bg-rose-400 mx-5 p-3 cursor-pointer hover:scale-110 ease-in duration-200"
+                type="button"
+                href="https://github.com/esther-sh-choi"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="github"
+              >
+                <FaGithub />
+              </Link>
+              <Link
+                className="rounded-full shadow-md bg-rose-400 p-3 cursor-pointer hover:scale-110 ease-in duration-200"
+                type="button"
+                href="https://flowcv.com/resume/0lnv2aak4d"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="resume"
+              >
+                <FaFileAlt />
+              </Link>
+            </div>
           </h1>
         </div>
       </div>
