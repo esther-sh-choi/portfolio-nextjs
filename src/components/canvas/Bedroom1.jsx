@@ -98,13 +98,13 @@ const Bedroom = ({ isSmallScreen }) => {
     // Computer - Projects
     !isOpen
       ? tl.to(camera.position, {
-          x: -0.02947425441128117,
-          y: 0.0019282798237053556,
-          z: 0.0015648388487006014,
+          x: -0.547425441128117,
+          y: 0.082282798237053556,
+          z: -0.0075648388487006014,
           scrollTrigger: {
             trigger: "#projects",
             start: "top bottom",
-            end: "top top",
+            end: "top 1%",
             // markers: true,
             // pin: "#projects",
             pinSpacing: false,
@@ -135,7 +135,7 @@ const Bedroom = ({ isSmallScreen }) => {
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
-            markers: true,
+            // markers: true,
             snap: !isSmallScreen && {
               snapTo: "#contact",
               duration: { min: 0.2, max: 0.5 },
@@ -146,16 +146,6 @@ const Bedroom = ({ isSmallScreen }) => {
           },
         })
       : tl.pause();
-
-    !isOpen
-      ? tl.set(camera.position, {
-          x: isSmallScreen ? 0.2 : -0.026012678122319,
-          y: isSmallScreen ? 0.8 : 0.06005036637699721,
-          z: isSmallScreen ? 3 : 0.04399400225061104,
-        })
-      : tl.pause();
-
-    // ScrollTrigger.refresh();
   });
   return (
     <>
