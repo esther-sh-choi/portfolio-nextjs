@@ -3,10 +3,11 @@ import { useThree } from "@react-three/fiber";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import React, { useLayoutEffect, useEffect } from "react";
+import React, { useLayoutEffect } from "react";
+import { isMobile } from "react-device-detect";
 import { useSelector } from "react-redux";
 
-const Bedroom = ({ isMobile }) => {
+const Bedroom = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   const { scene: bedroomScene } = useGLTF("/assets/models/bedroom.glb");
   const { camera } = useThree();
@@ -16,9 +17,7 @@ const Bedroom = ({ isMobile }) => {
 
   ScrollTrigger.config({
     limitCallbacks: true,
-    ignoreMobileResize: true,
   });
-  console.log(camera);
 
   useLayoutEffect(() => {
     !isOpen
