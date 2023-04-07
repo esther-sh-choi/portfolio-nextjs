@@ -30,8 +30,8 @@ const Bedroom = ({ isSmallScreen }) => {
             trigger: "#home",
             // pin: "#home",
             pinSpacing: false,
-            start: "top 99%",
-            end: "top 1%",
+            start: !isSmallScreen ? "top bottom" : "top 99%",
+            end: !isSmallScreen ? "top top" : "top 1%",
             scrub: true,
             immediateRender: false,
             snap: !isSmallScreen && {
@@ -52,8 +52,8 @@ const Bedroom = ({ isSmallScreen }) => {
           z: 0.01601712490957726,
           scrollTrigger: {
             trigger: "#about",
-            start: "top 99%",
-            end: "top 1%",
+            start: !isSmallScreen ? "top bottom" : "top 99%",
+            end: !isSmallScreen ? "top top" : "top 1%",
             scrub: true,
             // pin: "#about",
             pinSpacing: false,
@@ -76,8 +76,8 @@ const Bedroom = ({ isSmallScreen }) => {
           z: 0.0005459788201534593,
           scrollTrigger: {
             trigger: "#skills",
-            start: "top bottom",
-            end: "top 1%",
+            start: !isSmallScreen ? "top bottom" : "top 99%",
+            end: !isSmallScreen ? "top top" : "top 1%",
             // pin: "#skills",
             pinSpacing: false,
             scrub: true,
@@ -99,8 +99,8 @@ const Bedroom = ({ isSmallScreen }) => {
           z: 0.0015648388487006014,
           scrollTrigger: {
             trigger: "#projects",
-            start: "top 99%",
-            end: "top 1%",
+            start: !isSmallScreen ? "top bottom" : "top 99%",
+            end: !isSmallScreen ? "top top" : "top 1%",
             // markers: true,
             // pin: "#projects",
             pinSpacing: false,
@@ -119,12 +119,12 @@ const Bedroom = ({ isSmallScreen }) => {
     !isOpen
       ? tl.to(camera.position, {
           x: isSmallScreen ? -0.01 : -0.026012678122319,
-          y: isSmallScreen ? 0.05 : 0.06005036637699721,
-          z: isSmallScreen ? 0.02 : 0.04399400225061104,
+          y: isSmallScreen ? 0.15 : 0.06005036637699721,
+          z: isSmallScreen ? 0.14 : 0.04399400225061104,
           scrollTrigger: {
             trigger: "#contact",
-            start: "top 99%",
-            end: "top 1px",
+            start: !isSmallScreen ? "top bottom" : "top 99%",
+            end: !isSmallScreen ? "top top" : "top 1px",
             // pin: "#contact",
             pinSpacing: false,
             scrub: true,
