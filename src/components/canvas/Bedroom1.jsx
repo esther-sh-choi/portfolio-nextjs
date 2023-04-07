@@ -102,7 +102,7 @@ const Bedroom = ({ isMobile }) => {
           scrollTrigger: {
             trigger: "#projects",
             start: "top bottom",
-            end: "top top",
+            end: "top 1%",
             // pin: "#projects",
             pinSpacing: false,
             scrub: true,
@@ -126,7 +126,7 @@ const Bedroom = ({ isMobile }) => {
           scrollTrigger: {
             trigger: "#contact",
             start: "top bottom",
-            end: "top 20%",
+            end: "top 1%",
             // pin: "#contact",
             pinSpacing: false,
             scrub: true,
