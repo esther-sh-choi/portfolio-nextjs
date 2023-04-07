@@ -41,9 +41,9 @@ const Main = () => {
                 }}
               />
             </div>
-            <div className="flex-col hidden md:flex">
+            <div className="hidden lg:flex mt-10 ">
               <Link
-                className="mt-0 md:mt-10 z-20 w-[80%] md:w-[200px] bg-gradient-to-b from-rose-300 to-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none text-center"
+                className="z-20 w-[150px] bg-gradient-to-r from-rose-300 to-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none text-center"
                 type="button"
                 href="https://flowcv.com/resume/0lnv2aak4d"
                 target="_blank"
@@ -52,7 +52,7 @@ const Main = () => {
                 Resume
               </Link>
               <Link
-                className="mt-2 z-20 w-[80%] md:w-[200px] bg-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none text-center"
+                className="z-20 w-[150px] mx-3 bg-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none text-center"
                 type="button"
                 href="https://www.linkedin.com/in/esther--choi/"
                 target="_blank"
@@ -61,7 +61,7 @@ const Main = () => {
                 LinkedIn
               </Link>
               <Link
-                className="mt-2 z-20 w-[80%] md:w-[200px] bg-gradient-to-t from-rose-300 to-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none text-center"
+                className="z-20 w-[150px] bg-gradient-to-l from-rose-300 to-rose-400 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none text-center"
                 type="button"
                 href="https://github.com/esther-sh-choi"
                 target="_blank"
@@ -70,7 +70,7 @@ const Main = () => {
                 Github
               </Link>
             </div>
-            <div className="flex items-center justify-between my-4 md:hidden">
+            <div className="flex items-center justify-between my-4 lg:hidden">
               <Link
                 className="rounded-full shadow-md bg-rose-400 p-3 cursor-pointer hover:scale-110 ease-in duration-200"
                 type="button"
