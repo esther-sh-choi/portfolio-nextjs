@@ -53,12 +53,14 @@ export default function Home() {
       <div className="h-screen w-full fixed top-0 z-0 lg:block">
         <CanvasContainer />
       </div>
-      <Navbar />
-      <Main />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <div className="h-screen w-full z-20">
+        <Navbar />
+        <Main />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </div>
       {isOpen && projectData && <ProjectModal />}
       <style>
         {isOpen

@@ -121,13 +121,13 @@ const Bedroom = ({ isSmallScreen }) => {
     // Coffee - contact me
     !isOpen
       ? tl.to(camera.position, {
-          x: isSmallScreen ? -0.01 : -0.016012678122319,
-          y: isSmallScreen ? 0.05 : 0.05005036637699721,
-          z: isSmallScreen ? 0.02 : 0.03399400225061104,
+          x: isSmallScreen ? -0.01 : -0.026012678122319,
+          y: isSmallScreen ? 0.05 : 0.06005036637699721,
+          z: isSmallScreen ? 0.02 : 0.04399400225061104,
           scrollTrigger: {
             trigger: "#contact",
             start: "top 99%",
-            end: "top 1%",
+            end: "top 1px",
             // pin: "#contact",
             pinSpacing: false,
             scrub: true,
