@@ -19,6 +19,8 @@ const Bedroom = ({ isSmallScreen }) => {
     ignoreMobileResize: true,
   });
 
+  ScrollTrigger.normalizeScroll(true);
+
   useLayoutEffect(() => {
     !isOpen
       ? tl.to(camera.position, {
@@ -118,9 +120,10 @@ const Bedroom = ({ isSmallScreen }) => {
     // Coffee - contact me
     !isOpen
       ? tl.to(camera.position, {
-          x: isSmallScreen ? -0.01 : -0.026012678122319,
-          y: isSmallScreen ? 0.15 : 0.06005036637699721,
-          z: isSmallScreen ? 0.14 : 0.04399400225061104,
+          x: isSmallScreen ? 0.12983012272721967 : -0.026012678122319,
+          y: isSmallScreen ? 0.4459620018409872 : 0.06005036637699721,
+          z: isSmallScreen ? 5.813218278397693 : 0.04399400225061104,
+          scale: 0.8,
           scrollTrigger: {
             trigger: "#contact",
             start: !isSmallScreen ? "top bottom" : "top 99%",
