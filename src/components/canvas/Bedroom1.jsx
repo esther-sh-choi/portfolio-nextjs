@@ -136,6 +136,7 @@ const Bedroom = ({ isSmallScreen }) => {
             scrub: true,
             immediateRender: false,
             // markers: true,
+            fastScrollEnd: true,
             snap: !isSmallScreen && {
               snapTo: "#contact",
               duration: { min: 0.2, max: 0.5 },
