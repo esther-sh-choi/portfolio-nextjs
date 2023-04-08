@@ -29,6 +29,7 @@ const Bedroom = ({ isSmallScreen }) => {
           scrollTrigger: {
             trigger: "#home",
             // pin: "#home",
+            pin: !isSmallScreen && true,
             pinSpacing: false,
             start: !isSmallScreen ? "top bottom" : "top 99%",
             end: !isSmallScreen ? "top top" : "top 1%",
@@ -56,6 +57,7 @@ const Bedroom = ({ isSmallScreen }) => {
             end: !isSmallScreen ? "top top" : "top 1%",
             scrub: true,
             // pin: "#about",
+            pin: !isSmallScreen && true,
             pinSpacing: false,
             immediateRender: false,
             snap: !isSmallScreen && {
@@ -80,6 +82,7 @@ const Bedroom = ({ isSmallScreen }) => {
             end: !isSmallScreen ? "top top" : "top 1%",
             // pin: "#skills",
             pinSpacing: false,
+            pin: !isSmallScreen && true,
             scrub: true,
             immediateRender: false,
             snap: !isSmallScreen && {
@@ -104,6 +107,7 @@ const Bedroom = ({ isSmallScreen }) => {
             // markers: true,
             // pin: "#projects",
             pinSpacing: false,
+            pin: !isSmallScreen && true,
             scrub: true,
             immediateRender: false,
             snap: !isSmallScreen && {
@@ -128,6 +132,7 @@ const Bedroom = ({ isSmallScreen }) => {
             end: !isSmallScreen ? "top top" : "top 1px",
             // pin: "#contact",
             pinSpacing: false,
+            pin: !isSmallScreen && true,
             scrub: true,
             immediateRender: false,
             // markers: true,
