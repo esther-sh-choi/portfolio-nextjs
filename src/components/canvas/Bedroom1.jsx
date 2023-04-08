@@ -19,8 +19,6 @@ const Bedroom = ({ isSmallScreen }) => {
     ignoreMobileResize: true,
   });
 
-  ScrollTrigger.normalizeScroll(true);
-
   useLayoutEffect(() => {
     !isOpen
       ? tl.to(camera.position, {
