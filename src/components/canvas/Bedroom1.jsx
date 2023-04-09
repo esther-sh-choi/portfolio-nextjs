@@ -11,7 +11,7 @@ const Bedroom = ({ isSmallScreen }) => {
   const { scene: bedroomScene } = useGLTF("/assets/models/bedroom.glb");
   const { camera } = useThree();
   const isOpen = useSelector((state) => state.project.isOpen);
-  const [directionDown, setDirectionDown] = useState();
+  const [directionDown, setDirectionDown] = useState(true);
 
   let tl = gsap.timeline();
 
@@ -39,8 +39,8 @@ const Bedroom = ({ isSmallScreen }) => {
             end: isSmallScreen ? "-=100vh" : "top 1%",
             scrub: true,
             immediateRender: false,
-            onUpdate: ({ direction }) =>
-              direction > 0 ? setDirectionDown(true) : setDirectionDown(false),
+            // onUpdate: ({ direction }) =>
+            //   direction > 0 ? setDirectionDown(true) : setDirectionDown(false),
             snap: !isSmallScreen && {
               snapTo: "#home", // snap to the closest label in the timeline
               duration: { min: 0.2, max: 0.5 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
@@ -69,8 +69,8 @@ const Bedroom = ({ isSmallScreen }) => {
             // toggleActions: "play pause play pause",
             pinSpacing: false,
             immediateRender: false,
-            onUpdate: ({ direction }) =>
-              direction > 0 ? setDirectionDown(true) : setDirectionDown(false),
+            // onUpdate: ({ direction }) =>
+            //   direction > 0 ? setDirectionDown(true) : setDirectionDown(false),
             snap: !isSmallScreen && {
               snapTo: "#about",
               duration: { min: 0.2, max: 0.5 },
@@ -99,8 +99,8 @@ const Bedroom = ({ isSmallScreen }) => {
             // toggleActions: "play pause play pause",
             scrub: true,
             immediateRender: false,
-            onUpdate: ({ direction }) =>
-              direction > 0 ? setDirectionDown(true) : setDirectionDown(false),
+            // onUpdate: ({ direction }) =>
+            //   direction > 0 ? setDirectionDown(true) : setDirectionDown(false),
             snap: !isSmallScreen && {
               snapTo: "#skills",
               duration: { min: 0.2, max: 1 },
@@ -128,8 +128,8 @@ const Bedroom = ({ isSmallScreen }) => {
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
-            onUpdate: ({ direction }) =>
-              direction > 0 ? setDirectionDown(true) : setDirectionDown(false),
+            // onUpdate: ({ direction }) =>
+            //   direction > 0 ? setDirectionDown(true) : setDirectionDown(false),
             snap: !isSmallScreen && {
               snapTo: "#projects",
               duration: { min: 0.2, max: 1 },
@@ -158,8 +158,8 @@ const Bedroom = ({ isSmallScreen }) => {
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
-            onUpdate: ({ direction }) =>
-              direction > 0 ? setDirectionDown(true) : setDirectionDown(false),
+            // onUpdate: ({ direction }) =>
+            //   direction > 0 ? setDirectionDown(true) : setDirectionDown(false),
             fastScrollEnd: true,
             snap: !isSmallScreen && {
               snapTo: "#contact",
