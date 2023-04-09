@@ -19,6 +19,10 @@ const Bedroom = ({ isSmallScreen }) => {
     ignoreMobileResize: true,
   });
 
+  ScrollTrigger.defaults({
+    toggleActions: "restart pause resume none",
+  });
+
   useLayoutEffect(() => {
     !isOpen
       ? tl.to(camera.position, {
