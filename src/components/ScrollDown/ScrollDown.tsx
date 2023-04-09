@@ -23,7 +23,7 @@ const ScrollDown = (): JSX.Element => {
   }, []);
 
   return visible ? (
-    <div className="fixed inset-x-0 bottom-3 md:bottom-10 flex flex-col items-center z-30">
+    <div className="fixed inset-x-0 bottom-3 md:bottom-10 flex flex-col items-center z-20">
       <p className="text-[#f43f5e] text-sm md:text-lg">{message}</p>
       <FaAngleDoubleDown className="text-[#f43f5e] animate-bounce mt-1" />
     </div>

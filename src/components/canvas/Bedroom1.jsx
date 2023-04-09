@@ -3,7 +3,7 @@ import { useThree } from "@react-three/fiber";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import React, { useLayoutEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { useSelector } from "react-redux";
 
 const Bedroom = ({ isSmallScreen }) => {
@@ -11,6 +11,7 @@ const Bedroom = ({ isSmallScreen }) => {
   const { scene: bedroomScene } = useGLTF("/assets/models/bedroom.glb");
   const { camera } = useThree();
   const isOpen = useSelector((state) => state.project.isOpen);
+  const [directionDown, setDirectionDown] = useState();
 
   let tl = gsap.timeline();
 
@@ -30,10 +31,16 @@ const Bedroom = ({ isSmallScreen }) => {
             trigger: "#home",
             toggleActions: "play pause play pause",
             pinSpacing: false,
-            start: isSmallScreen ? "top center" : "top 99%",
+            start: isSmallScreen
+              ? directionDown
+                ? "top center"
+                : "bottom center"
+              : "top 99%",
             end: isSmallScreen ? "-=100vh" : "top 1%",
             scrub: true,
             immediateRender: false,
+            onUpdate: ({ direction }) =>
+              direction > 0 ? setDirectionDown(true) : setDirectionDown(false),
             snap: !isSmallScreen && {
               snapTo: "#home", // snap to the closest label in the timeline
               duration: { min: 0.2, max: 0.5 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
@@ -52,12 +59,18 @@ const Bedroom = ({ isSmallScreen }) => {
           z: 0.01601712490957726,
           scrollTrigger: {
             trigger: "#about",
-            start: isSmallScreen ? "top center" : "top 99%",
+            start: isSmallScreen
+              ? directionDown
+                ? "top center"
+                : "bottom center"
+              : "top 99%",
             end: isSmallScreen ? "-=100vh" : "top 1%",
             scrub: true,
             toggleActions: "play pause play pause",
             pinSpacing: false,
             immediateRender: false,
+            onUpdate: ({ direction }) =>
+              direction > 0 ? setDirectionDown(true) : setDirectionDown(false),
             snap: !isSmallScreen && {
               snapTo: "#about",
               duration: { min: 0.2, max: 0.5 },
@@ -76,12 +89,18 @@ const Bedroom = ({ isSmallScreen }) => {
           z: 0.0005459788201534593,
           scrollTrigger: {
             trigger: "#skills",
-            start: isSmallScreen ? "top center" : "top 99%",
+            start: isSmallScreen
+              ? directionDown
+                ? "top center"
+                : "bottom center"
+              : "top 99%",
             end: isSmallScreen ? "-=100vh" : "top 1%",
             pinSpacing: false,
             toggleActions: "play pause play pause",
             scrub: true,
             immediateRender: false,
+            onUpdate: ({ direction }) =>
+              direction > 0 ? setDirectionDown(true) : setDirectionDown(false),
             snap: !isSmallScreen && {
               snapTo: "#skills",
               duration: { min: 0.2, max: 1 },
@@ -99,12 +118,18 @@ const Bedroom = ({ isSmallScreen }) => {
           z: 0.0015648388487006014,
           scrollTrigger: {
             trigger: "#projects",
-            start: isSmallScreen ? "top center" : "top 99%",
+            start: isSmallScreen
+              ? directionDown
+                ? "top center"
+                : "bottom center"
+              : "top 99%",
             end: isSmallScreen ? "-=100vh" : "top 1%",
             toggleActions: "play pause play pause",
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
+            onUpdate: ({ direction }) =>
+              direction > 0 ? setDirectionDown(true) : setDirectionDown(false),
             snap: !isSmallScreen && {
               snapTo: "#projects",
               duration: { min: 0.2, max: 1 },
@@ -123,13 +148,18 @@ const Bedroom = ({ isSmallScreen }) => {
           scale: 0.8,
           scrollTrigger: {
             trigger: "#contact",
-            start: isSmallScreen ? "top center" : "top 99%",
+            start: isSmallScreen
+              ? directionDown
+                ? "top center"
+                : "bottom center"
+              : "top 99%",
             end: isSmallScreen ? "-=100vh" : "top 1%",
             toggleActions: "play pause play pause",
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
-            // markers: true,
+            onUpdate: ({ direction }) =>
+              direction > 0 ? setDirectionDown(true) : setDirectionDown(false),
             fastScrollEnd: true,
             snap: !isSmallScreen && {
               snapTo: "#contact",

@@ -4,8 +4,7 @@ import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { AiOutlineClose, AiOutlineMail } from "react-icons/ai";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+import { AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 type MenuProps = {
