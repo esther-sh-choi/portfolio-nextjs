@@ -7,12 +7,9 @@ import TypeIt from "typeit-react";
 
 const Main = () => {
   return (
-    <div
-      id="Home"
-      className="h-screen z-20 relative flex flex-col items-center"
-    >
+    <div id="Home" className="h-full z-20 flex flex-col">
       <div
-        className={`${globalStyles.paddingX} absolute inset-0 top-[80px] md:top-[120px] max-w-7x1 mx-auto flex flex-row items-start gap-5 z-20`}
+        className={`${globalStyles.paddingX} inset-0 flex flex-row items-start gap-5 z-20`}
       >
         <div className="flex flex-col justify-center items-center md:mt-5">
           <div className="w-5 h-5 rounded-full bg-[#f43f5e]" />

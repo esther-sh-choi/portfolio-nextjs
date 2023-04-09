@@ -50,26 +50,29 @@ export default function Home() {
         />
         <meta property="og:url" content="https://www.esther-choi.com/" />
       </Head>
-      <div className="h-screen w-full fixed top-0 z-0 lg:block">
+      <div className="h-full w-full fixed top-0 z-0 lg:block">
         <CanvasContainer />
       </div>
-      <div className="h-screen w-full z-20">
+      <div className="h-screen relative">
         <Navbar />
-        <Main />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-      </div>
-      {isOpen && projectData && <ProjectModal />}
-      <style>
-        {isOpen
-          ? `body {
+        <div className="absolute top-12 md:top-20 h-full w-full">
+          <Main />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </div>
+
+        {isOpen && projectData && <ProjectModal />}
+        <style>
+          {isOpen
+            ? `body {
   overflow: hidden;
 }`
-          : "body {overflow: unset;}"}
-      </style>
-      <ScrollDown />
+            : "body {overflow: unset;}"}
+        </style>
+        <ScrollDown />
+      </div>
     </>
   );
 }

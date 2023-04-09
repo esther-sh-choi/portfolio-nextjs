@@ -5,11 +5,8 @@ import { GoTriangleDown } from "react-icons/go";
 
 const Skills = () => {
   return (
-    <div
-      id="skills"
-      className="md:h-screen flex justify-start md:items-center z-20"
-    >
-      <div className="mt-[50px] md:mt-0 h-full max-w-[1240px] w-[80%] lg:w-[50%] lg:ml-20 px-2 py-16 z-20 mx-auto relative">
+    <div id="skills" className="h-full flex justify-start items-center z-20">
+      <div className="mt-[50px] md:mt-0 h-full max-w-[1240px] w-[80%] lg:w-[50%] lg:ml-20 px-2 py-16 z-20 mx-auto relative flex flex-col justify-center">
         <p className="text-xl tracking-widest uppercase text-[#eb4971] drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
           Skills
         </p>
