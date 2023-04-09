@@ -29,7 +29,7 @@ const Bedroom = ({ isSmallScreen }) => {
           scale: 0.8,
           scrollTrigger: {
             trigger: "#home",
-            toggleActions: "play pause play pause",
+            // toggleActions: "play pause play pause",
             pinSpacing: false,
             start: isSmallScreen
               ? directionDown
@@ -66,7 +66,7 @@ const Bedroom = ({ isSmallScreen }) => {
               : "top 99%",
             end: isSmallScreen ? "-=100vh" : "top 1%",
             scrub: true,
-            toggleActions: "play pause play pause",
+            // toggleActions: "play pause play pause",
             pinSpacing: false,
             immediateRender: false,
             onUpdate: ({ direction }) =>
@@ -96,7 +96,7 @@ const Bedroom = ({ isSmallScreen }) => {
               : "top 99%",
             end: isSmallScreen ? "-=100vh" : "top 1%",
             pinSpacing: false,
-            toggleActions: "play pause play pause",
+            // toggleActions: "play pause play pause",
             scrub: true,
             immediateRender: false,
             onUpdate: ({ direction }) =>
@@ -124,7 +124,7 @@ const Bedroom = ({ isSmallScreen }) => {
                 : "bottom center"
               : "top 99%",
             end: isSmallScreen ? "-=100vh" : "top 1%",
-            toggleActions: "play pause play pause",
+            // toggleActions: "play pause play pause",
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
@@ -154,7 +154,7 @@ const Bedroom = ({ isSmallScreen }) => {
                 : "bottom center"
               : "top 99%",
             end: isSmallScreen ? "-=100vh" : "top 1%",
-            toggleActions: "play pause play pause",
+            // toggleActions: "play pause play pause",
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
