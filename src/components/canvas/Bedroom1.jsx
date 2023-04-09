@@ -30,11 +30,13 @@ const Bedroom = ({ isSmallScreen }) => {
             trigger: "#home",
             toggleActions: "play pause play pause",
             pinSpacing: false,
-            start: isSmallScreen ? "top bottom" : "top 99%",
-            end: isSmallScreen ? "top top" : "top 1%",
+            // start: isSmallScreen ? "top bottom" : "top 99%",
+            // end: isSmallScreen ? "top top" : "top 1%",
+            start: "top 99%",
+            end: "top 1%",
             scrub: true,
             immediateRender: false,
-            snap: !isSmallScreen && {
+            snap: {
               snapTo: "#home", // snap to the closest label in the timeline
               duration: { min: 0.2, max: 0.5 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
               delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
@@ -52,13 +54,15 @@ const Bedroom = ({ isSmallScreen }) => {
           z: 0.01601712490957726,
           scrollTrigger: {
             trigger: "#about",
-            start: isSmallScreen ? "top bottom" : "top 99%",
-            end: isSmallScreen ? "top top" : "top 1%",
+            // start: isSmallScreen ? "top bottom" : "top 99%",
+            // end: isSmallScreen ? "top top" : "top 1%",
+            start: "top 99%",
+            end: "top 1%",
             scrub: true,
             toggleActions: "play pause play pause",
             pinSpacing: false,
             immediateRender: false,
-            snap: !isSmallScreen && {
+            snap: {
               snapTo: "#about",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
@@ -76,13 +80,15 @@ const Bedroom = ({ isSmallScreen }) => {
           z: 0.0005459788201534593,
           scrollTrigger: {
             trigger: "#skills",
-            start: isSmallScreen ? "top bottom" : "top 99%",
-            end: isSmallScreen ? "top top" : "top 1%",
+            // start: isSmallScreen ? "top bottom" : "top 99%",
+            // end: isSmallScreen ? "top top" : "top 1%",
+            start: "top 99%",
+            end: "top 1%",
             pinSpacing: false,
             toggleActions: "play pause play pause",
             scrub: true,
             immediateRender: false,
-            snap: !isSmallScreen && {
+            snap: {
               snapTo: "#skills",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
@@ -99,13 +105,15 @@ const Bedroom = ({ isSmallScreen }) => {
           z: 0.0015648388487006014,
           scrollTrigger: {
             trigger: "#projects",
-            start: isSmallScreen ? "top bottom" : "top 99%",
-            end: isSmallScreen ? "top top" : "top 1%",
+            // start: isSmallScreen ? "top bottom" : "top 99%",
+            // end: isSmallScreen ? "top top" : "top 1%",
+            start: "top 99%",
+            end: "top 1%",
             toggleActions: "play pause play pause",
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
-            snap: !isSmallScreen && {
+            snap: {
               snapTo: "#projects",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
@@ -123,15 +131,17 @@ const Bedroom = ({ isSmallScreen }) => {
           scale: 0.8,
           scrollTrigger: {
             trigger: "#contact",
-            start: isSmallScreen ? "top bottom" : "top 99%",
-            end: isSmallScreen ? "top top" : "top 1%",
+            // start: isSmallScreen ? "top bottom" : "top 99%",
+            // end: isSmallScreen ? "top top" : "top 1%",
+            start: "top 99%",
+            end: "top 1%",
             toggleActions: "play pause play pause",
             pinSpacing: false,
             scrub: true,
             immediateRender: false,
             // markers: true,
             fastScrollEnd: true,
-            snap: !isSmallScreen && {
+            snap: {
               snapTo: "#contact",
               duration: { min: 0.2, max: 0.5 },
               delay: 0.2,
