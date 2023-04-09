@@ -7,9 +7,12 @@ import TypeIt from "typeit-react";
 
 const Main = () => {
   return (
-    <div id="Home" className="h-full z-20 flex flex-col">
+    <div
+      id="home"
+      className="h-[100vh] z-20 flex flex-col justify-between pt-12 md:pt-20"
+    >
       <div
-        className={`${globalStyles.paddingX} inset-0 flex flex-row items-start gap-5 z-20`}
+        className={`pl-5 pt-10 inset-0 flex flex-row items-start gap-5 z-20`}
       >
         <div className="flex flex-col justify-center items-center md:mt-5">
           <div className="w-5 h-5 rounded-full bg-[#f43f5e]" />
@@ -67,40 +70,40 @@ const Main = () => {
                 Github
               </Link>
             </div>
-            <div className="flex items-center justify-between my-4 lg:hidden">
-              <Link
-                className="rounded-full shadow-md bg-rose-400 p-3 cursor-pointer hover:scale-110 ease-in duration-200"
-                type="button"
-                href="https://www.linkedin.com/in/esther--choi/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="linkedin"
-              >
-                <FaLinkedinIn />
-              </Link>
-              <Link
-                className="rounded-full shadow-md bg-rose-400 mx-5 p-3 cursor-pointer hover:scale-110 ease-in duration-200"
-                type="button"
-                href="https://github.com/esther-sh-choi"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="github"
-              >
-                <FaGithub />
-              </Link>
-              <Link
-                className="rounded-full shadow-md bg-rose-400 p-3 cursor-pointer hover:scale-110 ease-in duration-200"
-                type="button"
-                href="https://flowcv.com/resume/0lnv2aak4d"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="resume"
-              >
-                <FaFileAlt />
-              </Link>
-            </div>
           </h1>
         </div>
+      </div>
+      <div className="flex items-center justify-around mb-20 lg:hidden text-white">
+        <Link
+          className="rounded-full shadow-md bg-rose-400 p-3 cursor-pointer hover:scale-110 ease-in duration-200"
+          type="button"
+          href="https://www.linkedin.com/in/esther--choi/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="linkedin"
+        >
+          <FaLinkedinIn />
+        </Link>
+        <Link
+          className="rounded-full shadow-md bg-rose-400 mx-5 p-3 cursor-pointer hover:scale-110 ease-in duration-200"
+          type="button"
+          href="https://github.com/esther-sh-choi"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="github"
+        >
+          <FaGithub />
+        </Link>
+        <Link
+          className="rounded-full shadow-md bg-rose-400 p-3 cursor-pointer hover:scale-110 ease-in duration-200"
+          type="button"
+          href="https://flowcv.com/resume/0lnv2aak4d"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="resume"
+        >
+          <FaFileAlt />
+        </Link>
       </div>
     </div>
   );

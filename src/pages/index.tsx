@@ -53,24 +53,21 @@ export default function Home() {
       <div className="h-full w-full fixed top-0 z-0 lg:block">
         <CanvasContainer />
       </div>
-      <div className="h-screen relative">
-        <Navbar />
-        <div className="absolute top-12 md:top-20 h-full w-full">
+      <div className="h-full flex flex-col">
+        <div className="">
+          <Navbar />
+        </div>
+        <div className="h-screen w-full flex-1 z-20">
           <Main />
           <About />
           <Skills />
           <Projects />
           <Contact />
+          {isOpen && projectData && <ProjectModal />}
+          <style>
+            {isOpen ? `body {overflow: hidden;}` : "body {overflow: unset;}"}
+          </style>
         </div>
-
-        {isOpen && projectData && <ProjectModal />}
-        <style>
-          {isOpen
-            ? `body {
-  overflow: hidden;
-}`
-            : "body {overflow: unset;}"}
-        </style>
         <ScrollDown />
       </div>
     </>

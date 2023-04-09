@@ -37,7 +37,10 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="h-full z-20 flex items-center justify-center">
+    <div
+      id="contact"
+      className="h-[100vh] z-20 flex items-center justify-center pt-12 md:pt-20"
+    >
       <div className="w-full h-full mx-5 flex flex-col justify-center lg:w-[800px] z-20">
         <p className="text-xl tracking-widest uppercase text-[#eb4971] drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
           Contact
