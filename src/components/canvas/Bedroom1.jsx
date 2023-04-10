@@ -48,11 +48,11 @@ const Bedroom = ({ isSmallScreen }) => {
         })
       : tl.pause();
 
-    // Bed - put me
+    // Bed - about me
     !isOpen
       ? tl.to(camera.position, {
           x: -0.51110440161001383,
-          y: 0.51326567011673244,
+          y: 0.1326567011673244,
           z: 1.01601712490957726,
           scrollTrigger: {
             trigger: "#about",
@@ -97,9 +97,9 @@ const Bedroom = ({ isSmallScreen }) => {
     // Computer - Projects
     !isOpen
       ? tl.to(camera.position, {
-          x: -0.01947425441128117,
-          y: 0.009282798237053556,
-          z: -0.0045648388487006014,
+          x: isSmallScreen ? -0.3947425441128117 : -0.01947425441128117,
+          y: isSmallScreen ? -0.0482798237053556 : 0.009282798237053556,
+          z: isSmallScreen ? 0.0482798237053556 : -0.009282798237053556,
           scrollTrigger: {
             trigger: "#projects",
             start: isSmallScreen ? "top center" : "top 99%",
@@ -116,6 +116,7 @@ const Bedroom = ({ isSmallScreen }) => {
           },
         })
       : tl.pause();
+
     // Coffee - contact me
     !isOpen
       ? tl.to(camera.position, {
