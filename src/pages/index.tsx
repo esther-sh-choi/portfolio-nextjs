@@ -50,14 +50,13 @@ export default function Home() {
         />
         <meta property="og:url" content="https://www.esther-choi.com/" />
       </Head>
-      <div className="h-full w-full fixed top-0 z-0 lg:block">
+      <div className="h-full w-full fixed top-0 lg:block">
         <CanvasContainer />
       </div>
       <div className="h-full flex flex-col">
-        <div className="">
-          <Navbar />
-        </div>
-        <div className="h-screen w-full flex-1 z-20">
+        <Navbar />
+
+        <div className="h-screen w-full flex-1">
           <Main />
           <About />
           <Skills />

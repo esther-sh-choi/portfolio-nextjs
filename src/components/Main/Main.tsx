@@ -73,7 +73,7 @@ const Main = () => {
           </h1>
         </div>
       </div>
-      <div className="flex items-center justify-around mb-32 lg:hidden text-white">
+      <div className="flex items-center justify-around mb-32 lg:hidden text-white z-20">
         <Link
           className="rounded-full shadow-md bg-rose-400 p-3 cursor-pointer hover:scale-110 ease-in duration-200"
           type="button"

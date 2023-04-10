@@ -6,14 +6,14 @@ const About = () => {
       id="about"
       className="h-[100vh] flex justify-center items-center z-20 pt-12 md:pt-20"
     >
-      <div className="max-w-[80%] lg:w-[70vw] lg:max-w-[1000px] z-20">
-        <p className="text-xl trakcing-widest uppercase text-[#eb4971] drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
+      <div className="mt-[50px] md:mt-0 h-full max-w-[1240px] w-[75%] lg:w-[50%] px-2 py-16 z-20 relative flex flex-col justify-center">
+        <p className="text-xl tracking-widest uppercase text-[#eb4971] drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
           About Me
         </p>
-        <h2 className="text-[#eb4971] mb-5 drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
+        <h2 className="py-2 md:py-4 text-[#eb4971] drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
           Welcome to my virtual room!
         </h2>
-        <div className="max-h-[50vh] lg:max-h-[60vh] overflow-auto bg-white bg-opacity-80 p-10 rounded-xl m-auto">
+        <div className="md:max-h-auto overflow-y-scroll mt-2 shadow-xl rounded-xl max-h-[50vh] lg:max-h-[60vh] overflow-auto bg-white bg-opacity-80 p-10 m-auto">
           <p className="whitespace-pre-line text-sm md:text-md lg:text-lg">
             Hi, I&apos;m Esther Choi. I am a software developer and an Ontario
             certified teacher who previously worked for York Region District

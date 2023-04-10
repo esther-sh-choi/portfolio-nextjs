@@ -16,7 +16,7 @@ const Projects = () => {
       id="projects"
       className="h-[100vh] flex justify-end items-center z-20 pt-12 md:pt-20"
     >
-      <div className="mt-[50px] md:mt-0 h-full max-w-[1240px] w-[90%] lg:w-[50%] lg:mr-20 px-2 py-5 z-20 mx-auto relative flex flex-col justify-center">
+      <div className="mt-[50px] md:mt-0 h-full max-w-[1240px] w-[75%] lg:w-[50%] lg:mr-20 px-2 py-5 z-20 mx-auto relative flex flex-col justify-center">
         <p className="text-xl tracking-widest uppercase text-[#eb4971] text-right drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
           Projects
         </p>
@@ -48,7 +48,7 @@ const Projects = () => {
             </div>
           ))}
         </div>
-        <GoTriangleDown className="md:hidden absolute bottom-8 left-[50%] translate-x-[-50%] text-3xl text-[#ffd54c]" />
+        <GoTriangleDown className="md:hidden absolute bottom-0 left-[50%] translate-x-[-50%] text-3xl text-[#ffd54c]" />
       </div>
     </div>
   );

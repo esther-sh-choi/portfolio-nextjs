@@ -26,13 +26,13 @@ const ProjectModal = (): JSX.Element | null => {
   return (
     <div
       id="projects"
-      className="justify-center items-center flex overflow-hidden fixed inset-0 outline-none focus:outline-none z-30"
+      className="justify-center items-center flex overflow-hidden fixed inset-0 outline-none focus:outline-none z-40"
     >
       <div
-        className="opacity-50 fixed inset-0 bg-black z-30"
+        className="opacity-50 fixed inset-0 bg-black z-40"
         onClick={handleOverlayClick}
       ></div>
-      <div className="relative w-auto lg:w-[90vw] lg:max-h-[90vh] my-6 mx-auto max-w-[90vw] md:max-w-[80vw] lg:max-w-[1000px] z-40">
+      <div className="relative w-auto lg:w-[90vw] lg:max-h-[90vh] my-6 mx-auto max-w-[90vw] md:max-w-[80vw] lg:max-w-[1000px] z-50">
         {/*content*/}
         <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none z-60 p-5 overflow-hidden">
           {/*header*/}
