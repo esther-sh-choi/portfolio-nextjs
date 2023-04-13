@@ -6,14 +6,14 @@ const About = () => {
       id="about"
       className="h-[100vh] flex justify-center items-center z-20 pt-12 md:pt-20"
     >
-      <div className="mt-[50px] md:mt-0 h-full max-w-[1240px] w-[75%] lg:w-[50%] px-2 py-16 z-20 relative flex flex-col justify-center">
+      <div className="h-full max-w-[1240px] w-[75%] lg:w-[50%] px-2 py-16 md:pb-32 z-20 relative flex flex-col justify-center">
         <p className="text-xl tracking-widest uppercase text-[#eb4971] drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
           About Me
         </p>
         <h2 className="py-2 md:py-4 text-[#eb4971] drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
           Welcome to my virtual room!
         </h2>
-        <div className="md:max-h-auto overflow-y-scroll mt-2 shadow-xl rounded-xl max-h-[50vh] lg:max-h-[60vh] overflow-auto bg-white bg-opacity-80 p-5 md:p-10 m-auto">
+        <div className="overflow-y-scroll mt-2 shadow-xl rounded-xl max-h-[50vh] lg:max-h-[60vh] overflow-auto bg-white bg-opacity-80 p-5 md:p-10">
           <p className="whitespace-pre-line text-sm md:text-md lg:text-lg">
             Hi, I&apos;m Esther Choi. I am a software developer and an Ontario
             certified teacher who previously worked for York Region District

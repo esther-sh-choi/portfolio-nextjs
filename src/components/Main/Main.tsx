@@ -11,14 +11,10 @@ const Main = () => {
       id="home"
       className="h-[100vh] z-20 flex flex-col justify-between pt-12 md:pt-20"
     >
-      <div
-        className={`pl-5 pt-10 inset-0 flex flex-row items-start gap-5 z-20`}
-      >
+      <div className="pl-5 pt-10 inset-0 flex flex-row items-start gap-5 z-20">
         <div className="flex flex-col justify-center items-center md:mt-5">
           <div className="w-5 h-5 rounded-full bg-[#f43f5e]" />
-          <div
-            className={`w-1 h-36 md:h-80 bg-gradient-to-b from-red-400 to-transparent sm:h-40`}
-          />
+          <div className="w-1 h-36 md:h-80 bg-gradient-to-b from-red-400 to-transparent sm:h-40" />
         </div>
         <div className="flex flex-col w-full">
           <h1 className={`${styles.mainText} flex flex-col items-start`}>

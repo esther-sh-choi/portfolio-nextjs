@@ -9,7 +9,7 @@ const Skills = () => {
       id="skills"
       className="h-[100vh] flex justify-start items-center z-20 pt-12 md:pt-20"
     >
-      <div className="mt-[50px] md:mt-0 h-full max-w-[1240px] w-[75%] lg:w-[50%] lg:ml-20 px-2 py-16 z-20 mx-auto relative flex flex-col justify-center">
+      <div className="h-full max-w-[1240px] w-[75%] lg:w-[50%] lg:ml-20 px-2 py-16 md:pb-32 z-20 mx-auto relative flex flex-col justify-center">
         <p className="text-xl tracking-widest uppercase text-[#eb4971] drop-shadow-[0_2px_1.2px_rgba(255,255,255)]">
           Skills
         </p>
@@ -37,7 +37,10 @@ const Skills = () => {
             </div>
           ))}
         </div>
-        <GoTriangleDown className="md:hidden absolute bottom-10 left-[50%] translate-x-[-50%] text-3xl text-[#eb4971]" />
+        <GoTriangleDown
+          className="md:hidden absolute bottom-12
+         left-[50%] translate-x-[-50%] text-xl text-[#eb4971]"
+        />
       </div>
     </div>
   );
